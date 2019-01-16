@@ -127,7 +127,7 @@ namespace ERP.Presentacion.Inicio
             //comprobamos si se han pasado parámetros 
             if (Environment.GetCommandLineArgs().Length > 1)
             {
-               
+
                 //String[] parametros = Environment.GetCommandLineArgs();
 
                 string srtUsuario = Environment.GetCommandLineArgs()[1];
