@@ -1,0 +1,2864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67229837-DEBF-47FB-B2CA-00EC63C64527}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ERP.Presentacion</RootNamespace>
+    <AssemblyName>ERP.Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>ftp://200.60.112.30/ASA/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://localhost/ERP.Presentacion/</InstallUrl>
+    <UpdateUrl>\\172.23.64.203\ASA\</UpdateUrl>
+    <ProductName>Gestión Textil</ProductName>
+    <PublisherName>Lendi Solutions</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>95</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App-ksirtet.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CF6EE470D4569A419BAF76B0800F84D08B8B4F32</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ERP.Presentacion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OFFICE, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\office\15.0.0.0__71e9bce111e9429c\OFFICE.DLL</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlUser\UIToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlUser\UIToolBar.designer.cs">
+      <DependentUpon>UIToolBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Criptografia\CryptoServiceProvider.cs" />
+    <Compile Include="Criptografia\Encrypt.cs" />
+    <Compile Include="Criptografia\GenKey.cs" />
+    <Compile Include="Funciones\FuncionBase.cs" />
+    <Compile Include="Inicio\frmIDE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\frmIDE.designer.cs">
+      <DependentUpon>frmIDE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManClassification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManClassification.designer.cs">
+      <DependentUpon>frmManClassification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManClassificationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManClassificationEdit.designer.cs">
+      <DependentUpon>frmManClassificationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManCorporation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManCorporation.designer.cs">
+      <DependentUpon>frmManCorporation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManCorporationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManCorporationEdit.designer.cs">
+      <DependentUpon>frmManCorporationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManDestination.designer.cs">
+      <DependentUpon>frmManDestination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManDestinationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManDestinationEdit.designer.cs">
+      <DependentUpon>frmManDestinationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManEvaluation.designer.cs">
+      <DependentUpon>frmManEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManEvaluationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManEvaluationEdit.designer.cs">
+      <DependentUpon>frmManEvaluationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManGroupStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManGroupStyle.designer.cs">
+      <DependentUpon>frmManGroupStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManGroupStyleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManGroupStyleEdit.designer.cs">
+      <DependentUpon>frmManGroupStyleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManMediaUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManMediaUnit.designer.cs">
+      <DependentUpon>frmManMediaUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManMediaUnitEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManMediaUnitEdit.designer.cs">
+      <DependentUpon>frmManMediaUnitEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManPhase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManPhase.designer.cs">
+      <DependentUpon>frmManPhase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManPhaseEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManPhaseEdit.designer.cs">
+      <DependentUpon>frmManPhaseEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManSeason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManSeason.designer.cs">
+      <DependentUpon>frmManSeason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManSeasonEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManSeasonEdit.designer.cs">
+      <DependentUpon>frmManSeasonEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManStatus.designer.cs">
+      <DependentUpon>frmManStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManStatusEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManStatusEdit.designer.cs">
+      <DependentUpon>frmManStatusEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManStatusPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManStatusPO.designer.cs">
+      <DependentUpon>frmManStatusPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManStatusPOEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManStatusPOEdit.designer.cs">
+      <DependentUpon>frmManStatusPOEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTalla.designer.cs">
+      <DependentUpon>frmManTalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTallaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTallaEdit.designer.cs">
+      <DependentUpon>frmManTallaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManType.designer.cs">
+      <DependentUpon>frmManType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeDesign.designer.cs">
+      <DependentUpon>frmManTypeDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeDesignEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeDesignEdit.designer.cs">
+      <DependentUpon>frmManTypeDesignEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeEdit.designer.cs">
+      <DependentUpon>frmManTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeStyle.designer.cs">
+      <DependentUpon>frmManTypeStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeStyleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Maestros\frmManTypeStyleEdit.designer.cs">
+      <DependentUpon>frmManTypeStyleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegClient.Designer.cs">
+      <DependentUpon>frmRegClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegClientEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegClientEdit.Designer.cs">
+      <DependentUpon>frmRegClientEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegStyle.Designer.cs">
+      <DependentUpon>frmRegStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegStyleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegStyleEdit.Designer.cs">
+      <DependentUpon>frmRegStyleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegVendor.Designer.cs">
+      <DependentUpon>frmRegVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegVendorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administration\Registros\frmRegVendorEdit.Designer.cs">
+      <DependentUpon>frmRegVendorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManArea.designer.cs">
+      <DependentUpon>frmManArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManAreaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManAreaEdit.designer.cs">
+      <DependentUpon>frmManAreaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManCargo.designer.cs">
+      <DependentUpon>frmManCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManCargoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManCargoEdit.designer.cs">
+      <DependentUpon>frmManCargoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManEmpresa.designer.cs">
+      <DependentUpon>frmManEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManEmpresaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManEmpresaEdit.designer.cs">
+      <DependentUpon>frmManEmpresaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManPerfil.designer.cs">
+      <DependentUpon>frmManPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManPerfilEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManPerfilEdit.designer.cs">
+      <DependentUpon>frmManPerfilEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManPersona.designer.cs">
+      <DependentUpon>frmManPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManPersonaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManPersonaEdit.designer.cs">
+      <DependentUpon>frmManPersonaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManTabla.designer.cs">
+      <DependentUpon>frmManTabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManTablaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManTablaEdit.designer.cs">
+      <DependentUpon>frmManTablaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManTablaElemento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManTablaElemento.designer.cs">
+      <DependentUpon>frmManTablaElemento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManTablaElementoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManTablaElementoEdit.designer.cs">
+      <DependentUpon>frmManTablaElementoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManUsuario.designer.cs">
+      <DependentUpon>frmManUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManUsuarioEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\frmManUsuarioEdit.designer.cs">
+      <DependentUpon>frmManUsuarioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManBank.designer.cs">
+      <DependentUpon>frmManBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManBankEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManBankEdit.designer.cs">
+      <DependentUpon>frmManBankEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManCurrency.designer.cs">
+      <DependentUpon>frmManCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManCurrencyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManCurrencyEdit.designer.cs">
+      <DependentUpon>frmManCurrencyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManTypeCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManTypeCertificate.designer.cs">
+      <DependentUpon>frmManTypeCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManTypeCertificateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Maestros\frmManTypeCertificateEdit.designer.cs">
+      <DependentUpon>frmManTypeCertificateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInspectionCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInspectionCertificate.Designer.cs">
+      <DependentUpon>frmRegInspectionCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInspectionCertificateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInspectionCertificateEdit.Designer.cs">
+      <DependentUpon>frmRegInspectionCertificateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInspectionCertificateFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInspectionCertificateFile.Designer.cs">
+      <DependentUpon>frmRegInspectionCertificateFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInvoice.Designer.cs">
+      <DependentUpon>frmRegInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInvoiceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Registros\frmRegInvoiceEdit.Designer.cs">
+      <DependentUpon>frmRegInvoiceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Rpt\rptInspectionCertificate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInspectionCertificate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Rpt\rptInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Rpt\rptInvoiceCommisionCover.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvoiceCommisionCover.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusCertificate.Designer.cs">
+      <DependentUpon>frmBusCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusDestination.Designer.cs">
+      <DependentUpon>frmBusDestination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusElementTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusElementTable.Designer.cs">
+      <DependentUpon>frmBusElementTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusPersona.designer.cs">
+      <DependentUpon>frmBusPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusStyle.Designer.cs">
+      <DependentUpon>frmBusStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusType.Designer.cs">
+      <DependentUpon>frmBusType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusUbigeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Otros\frmBusUbigeo.Designer.cs">
+      <DependentUpon>frmBusUbigeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Consultas\frmConProductionProgramControlOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Consultas\frmConProductionProgramControlOI.Designer.cs">
+      <DependentUpon>frmConProductionProgramControlOI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Consultas\frmConProductionProgramDateOpenPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Consultas\frmConProductionProgramDateOpenPO.Designer.cs">
+      <DependentUpon>frmConProductionProgramDateOpenPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Consultas\frmConProductionProgramExpired.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Consultas\frmConProductionProgramExpired.Designer.cs">
+      <DependentUpon>frmConProductionProgramExpired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Consultas\frmConProductionProgramSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Consultas\frmConProductionProgramSummary.Designer.cs">
+      <DependentUpon>frmConProductionProgramSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegCommiment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegCommiment.Designer.cs">
+      <DependentUpon>frmRegCommiment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegCommimentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegCommimentEdit.Designer.cs">
+      <DependentUpon>frmRegCommimentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegControlAuditEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegControlAuditEdit.Designer.cs">
+      <DependentUpon>frmRegControlAuditEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegProductionProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegProductionProgram.Designer.cs">
+      <DependentUpon>frmRegProductionProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegProductionProgramDevelopmentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegProductionProgramDevelopmentEdit.Designer.cs">
+      <DependentUpon>frmRegProductionProgramDevelopmentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegProductionProgramEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegProductionProgramEdit.Designer.cs">
+      <DependentUpon>frmRegProductionProgramEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegProgramProductionAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Registros\frmRegProgramProductionAudit.Designer.cs">
+      <DependentUpon>frmRegProgramProductionAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepProgramProduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepProgramProduction.Designer.cs">
+      <DependentUpon>frmRepProgramProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepProgramProductionClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepProgramProductionClient.Designer.cs">
+      <DependentUpon>frmRepProgramProductionClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepProgramProductionDevelopment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepProgramProductionDevelopment.Designer.cs">
+      <DependentUpon>frmRepProgramProductionDevelopment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Production\Rpt\rptProgramProduction.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProgramProduction.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Rpt\rptProgramProductionDate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProgramProductionDate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Rpt\rptProgramProductionDevelopment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProgramProductionDevelopment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parametros.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbon.cs" />
+    <Compile Include="RptVistaReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptVistaReportes.designer.cs">
+      <DependentUpon>RptVistaReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\BSUtils.cs" />
+    <Content Include="Pdf\AxInterop.AcroPDFLib.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\Interop.AcroPDFLib.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\x64\pdfium.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\x86\pdfium.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Style.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\ProductionProgram.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\ProductionProgramExpired.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\ASAOpenPOReport.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\ProductionProgramAudit.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\InspectionCertificate.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\ProductionProgramClient.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Invoice.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Excel\NEW WIP FORMAT.xlsx" />
+    <Content Include="Excel\ProductionProgramSummary.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Excel\Shipping Report.xlsx" />
+    <None Include="Resources\print_16x16.gif" />
+    <None Include="Modulos\Invoices\Rpt\reporteinvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Image 197.jpg" />
+    <None Include="Resources\InspectionCertificateFile_32x32.gif" />
+    <None Include="Modulos\Invoices\Rpt\reporteinspectioncertificate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Auditoria2_16x16.gif" />
+    <None Include="Resources\Auditoria_16x16.gif" />
+    <None Include="Resources\Auditoria_16x16.ico" />
+    <None Include="Resources\Audit_16x16.gif" />
+    <None Include="Modulos\Production\Rpt\reporteprogramproductiondevelopment.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Development_16x16.gif" />
+    <None Include="Resources\Copy_16x16.gif" />
+    <None Include="Modulos\Production\Rpt\reporteprogramproduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Excel_16x16.gif" />
+    <None Include="Resources\excel_16x161.gif" />
+    <EmbeddedResource Include="Modulos\Invoices\Registros\frmRegInspectionCertificate.resx">
+      <DependentUpon>frmRegInspectionCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Registros\frmRegInspectionCertificateEdit.resx">
+      <DependentUpon>frmRegInspectionCertificateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Registros\frmRegInspectionCertificateFile.resx">
+      <DependentUpon>frmRegInspectionCertificateFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Registros\frmRegInvoice.resx">
+      <DependentUpon>frmRegInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Registros\frmRegInvoiceEdit.resx">
+      <DependentUpon>frmRegInvoiceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Rpt\rptInspectionCertificate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInspectionCertificate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Rpt\rptInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Rpt\rptInvoiceCommisionCover.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvoiceCommisionCover.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Otros\frmBusCertificate.resx">
+      <DependentUpon>frmBusCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Otros\frmBusElementTable.resx">
+      <DependentUpon>frmBusElementTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Consultas\frmConProductionProgramControlOI.resx">
+      <DependentUpon>frmConProductionProgramControlOI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Consultas\frmConProductionProgramDateOpenPO.resx">
+      <DependentUpon>frmConProductionProgramDateOpenPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Consultas\frmConProductionProgramExpired.resx">
+      <DependentUpon>frmConProductionProgramExpired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Consultas\frmConProductionProgramSummary.resx">
+      <DependentUpon>frmConProductionProgramSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Registros\frmRegCommiment.resx">
+      <DependentUpon>frmRegCommiment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Registros\frmRegCommimentEdit.resx">
+      <DependentUpon>frmRegCommimentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Registros\frmRegControlAuditEdit.resx">
+      <DependentUpon>frmRegControlAuditEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Registros\frmRegProductionProgramDevelopmentEdit.resx">
+      <DependentUpon>frmRegProductionProgramDevelopmentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Registros\frmRegProgramProductionAudit.resx">
+      <DependentUpon>frmRegProgramProductionAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Reportes\frmRepProgramProduction.resx">
+      <DependentUpon>frmRepProgramProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Reportes\frmRepProgramProductionClient.resx">
+      <DependentUpon>frmRepProgramProductionClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Reportes\frmRepProgramProductionDevelopment.resx">
+      <DependentUpon>frmRepProgramProductionDevelopment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Rpt\rptProgramProduction.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProgramProduction.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Rpt\rptProgramProductionDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProgramProductionDate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Rpt\rptProgramProductionDevelopment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProgramProductionDevelopment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptVistaReportes.resx">
+      <DependentUpon>RptVistaReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ERP.Presentacion_TemporaryKey.pfx" />
+    <Content Include="Excel\Commiment.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\ProductionProgram_32x32.gif" />
+    <None Include="Excel\Vendor.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Clientes_16x16.gif" />
+    <None Include="Resources\Company_16x16.gif" />
+    <EmbeddedResource Include="ControlUser\UIToolBar.resx">
+      <DependentUpon>UIToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <Content Include="Excel\Company.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Login.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Profile.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\WorkArea.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Occupation.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Employee.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Tablet.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Corporation.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Evaluation.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Classification.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Season.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Destination.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\TypeStyle.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\GroupStyle.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\TypeDesign.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Talla.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\MediaUnit.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Status.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Type.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\StatusPO.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Phase.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Currency.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\TypeCertificate.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Bank.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\nl\PdfiumViewer.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\PdfiumViewer.Demo.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\PdfiumViewer.Demo.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\PdfiumViewer.Demo.vshost.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\PdfiumViewer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\PdfiumViewer.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\Vacio.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdf\PdfiumViewer.Demo.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Excel\Client.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Pdf\PdfiumViewer.Demo.vshost.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Pdf\PdfiumViewer.Demo.vshost.exe.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Inicio\frmIDE.resx">
+      <DependentUpon>frmIDE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManClassification.resx">
+      <DependentUpon>frmManClassification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManClassificationEdit.resx">
+      <DependentUpon>frmManClassificationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManCorporation.resx">
+      <DependentUpon>frmManCorporation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManCorporationEdit.resx">
+      <DependentUpon>frmManCorporationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManDestination.resx">
+      <DependentUpon>frmManDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManDestinationEdit.resx">
+      <DependentUpon>frmManDestinationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManEvaluation.resx">
+      <DependentUpon>frmManEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManEvaluationEdit.resx">
+      <DependentUpon>frmManEvaluationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManGroupStyle.resx">
+      <DependentUpon>frmManGroupStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManGroupStyleEdit.resx">
+      <DependentUpon>frmManGroupStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManMediaUnit.resx">
+      <DependentUpon>frmManMediaUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManMediaUnitEdit.resx">
+      <DependentUpon>frmManMediaUnitEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManPhase.resx">
+      <DependentUpon>frmManPhase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManPhaseEdit.resx">
+      <DependentUpon>frmManPhaseEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManSeason.resx">
+      <DependentUpon>frmManSeason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManSeasonEdit.resx">
+      <DependentUpon>frmManSeasonEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManStatus.resx">
+      <DependentUpon>frmManStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManStatusEdit.resx">
+      <DependentUpon>frmManStatusEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManStatusPO.resx">
+      <DependentUpon>frmManStatusPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManStatusPOEdit.resx">
+      <DependentUpon>frmManStatusPOEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManTalla.resx">
+      <DependentUpon>frmManTalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManTallaEdit.resx">
+      <DependentUpon>frmManTallaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManType.resx">
+      <DependentUpon>frmManType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManTypeDesign.resx">
+      <DependentUpon>frmManTypeDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManTypeDesignEdit.resx">
+      <DependentUpon>frmManTypeDesignEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManTypeEdit.resx">
+      <DependentUpon>frmManTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManTypeStyle.resx">
+      <DependentUpon>frmManTypeStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Maestros\frmManTypeStyleEdit.resx">
+      <DependentUpon>frmManTypeStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Registros\frmRegClient.resx">
+      <DependentUpon>frmRegClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Registros\frmRegClientEdit.resx">
+      <DependentUpon>frmRegClientEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Registros\frmRegStyle.resx">
+      <DependentUpon>frmRegStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Registros\frmRegStyleEdit.resx">
+      <DependentUpon>frmRegStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Registros\frmRegVendor.resx">
+      <DependentUpon>frmRegVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administration\Registros\frmRegVendorEdit.resx">
+      <DependentUpon>frmRegVendorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManArea.resx">
+      <DependentUpon>frmManArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManAreaEdit.resx">
+      <DependentUpon>frmManAreaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManCargo.resx">
+      <DependentUpon>frmManCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManCargoEdit.resx">
+      <DependentUpon>frmManCargoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManEmpresa.resx">
+      <DependentUpon>frmManEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManEmpresaEdit.resx">
+      <DependentUpon>frmManEmpresaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManPerfil.resx">
+      <DependentUpon>frmManPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManPerfilEdit.resx">
+      <DependentUpon>frmManPerfilEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManPersona.resx">
+      <DependentUpon>frmManPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManPersonaEdit.resx">
+      <DependentUpon>frmManPersonaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManTabla.resx">
+      <DependentUpon>frmManTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManTablaEdit.resx">
+      <DependentUpon>frmManTablaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManTablaElemento.resx">
+      <DependentUpon>frmManTablaElemento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManTablaElementoEdit.resx">
+      <DependentUpon>frmManTablaElementoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManUsuario.resx">
+      <DependentUpon>frmManUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\frmManUsuarioEdit.resx">
+      <DependentUpon>frmManUsuarioEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Maestros\frmManBank.resx">
+      <DependentUpon>frmManBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Maestros\frmManBankEdit.resx">
+      <DependentUpon>frmManBankEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Maestros\frmManCurrency.resx">
+      <DependentUpon>frmManCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Maestros\frmManCurrencyEdit.resx">
+      <DependentUpon>frmManCurrencyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Maestros\frmManTypeCertificate.resx">
+      <DependentUpon>frmManTypeCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Maestros\frmManTypeCertificateEdit.resx">
+      <DependentUpon>frmManTypeCertificateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Otros\frmBusDestination.resx">
+      <DependentUpon>frmBusDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Otros\frmBusPersona.resx">
+      <DependentUpon>frmBusPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Otros\frmBusStyle.resx">
+      <DependentUpon>frmBusStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Otros\frmBusType.resx">
+      <DependentUpon>frmBusType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Otros\frmBusUbigeo.resx">
+      <DependentUpon>frmBusUbigeo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Registros\frmRegProductionProgram.resx">
+      <DependentUpon>frmRegProductionProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Registros\frmRegProductionProgramEdit.resx">
+      <DependentUpon>frmRegProductionProgramEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.BusinessEntity\ERP.BusinessEntity.csproj">
+      <Project>{f1b9373b-fb47-4613-94b2-f4312a9d0fd0}</Project>
+      <Name>ERP.BusinessEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERP.BusinessLogic\ERP.BusinessLogic.csproj">
+      <Project>{2b6bf631-5549-43a8-a298-f03704584146}</Project>
+      <Name>ERP.BusinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App-ksirtet.ico" />
+    <Content Include="Imagenes\Aceptar_16x16.gif" />
+    <Content Include="Imagenes\actualizar.gif" />
+    <Content Include="Imagenes\ActualizarListaPrecio_16x16.gif" />
+    <Content Include="Imagenes\add.png" />
+    <Content Include="Imagenes\Add_16x16.gif" />
+    <Content Include="Imagenes\Cancelar_16x16.gif" />
+    <Content Include="Imagenes\Consultar_16x16.png" />
+    <Content Include="Imagenes\database16x16.gif" />
+    <Content Include="Imagenes\delete.png" />
+    <Content Include="Imagenes\Descuento_16x16.gif" />
+    <Content Include="Imagenes\edit.png" />
+    <Content Include="Imagenes\Elementos_16x16.gif" />
+    <Content Include="Imagenes\excel_16x16.gif" />
+    <Content Include="Imagenes\Exit.gif" />
+    <Content Include="Imagenes\Fecha_16x16.gif" />
+    <Content Include="Imagenes\guardar_16x16.gif" />
+    <Content Include="Imagenes\Modulo_16X16.gif" />
+    <Content Include="Imagenes\noImage.jpg" />
+    <Content Include="Imagenes\print_16x16.gif" />
+    <Content Include="Imagenes\Remove_16x16.gif" />
+    <Content Include="Imagenes\save_16x16.gif" />
+    <Content Include="Imagenes\Transferencia_16x16.gif" />
+    <Content Include="Imagenes\VerMovimiento_16x16.gif" />
+    <None Include="Resources\noImage.jpg" />
+    <None Include="Resources\Factura_32x32.gif" />
+    <None Include="Resources\CertificadoInspeccion_32x32.gif" />
+    <None Include="Resources\TipoCertificado_32x32.gif" />
+    <None Include="Resources\Moneda_32x32.gif" />
+    <None Include="Resources\ProgramaProduccion_32x32.gif" />
+    <None Include="Resources\Compromiso_32x32.gif" />
+    <None Include="Resources\EstadoPO_32x32.gif" />
+    <None Include="Resources\Fase_32x32.gif" />
+    <None Include="Resources\Estilo_32x32.gif" />
+    <None Include="Resources\Tipo_32x32.gif" />
+    <None Include="Resources\EstadoFabricante_32x32.gif" />
+    <None Include="Resources\Talla_32x32.gif" />
+    <None Include="Resources\Fabricante_32x32.gif" />
+    <None Include="Resources\TipoDiseño_32x32.gif" />
+    <None Include="Resources\GrupoEstilo_32x32.gif" />
+    <None Include="Resources\Color_32x32.gif" />
+    <None Include="Resources\TipoEstilo_32x32.gif" />
+    <None Include="Resources\Destino_32x32.gif" />
+    <None Include="Resources\Estacion_32x32.gif" />
+    <None Include="Resources\Clasificacion_32x32.gif" />
+    <None Include="Resources\Evaluacion_32x32.gif" />
+    <None Include="Resources\Corporacion_32x32.gif" />
+    <None Include="Resources\UsuarioDivision_32x32.gif" />
+    <None Include="Resources\Usuario_32x32.gif" />
+    <None Include="Resources\UnidadMinera_16x16.gif" />
+    <None Include="Resources\UnidadMedida_32x32.gif" />
+    <None Include="Resources\UbicacionArticulo_32x32.gif" />
+    <None Include="Resources\Ubicacion_32x32.gif" />
+    <None Include="Resources\TipoGasto_32x32.gif" />
+    <None Include="Resources\TipoDocumento_32x32.gif" />
+    <None Include="Resources\TipoCambio_32x32.gif" />
+    <None Include="Resources\Tienda_32x32.gif" />
+    <None Include="Resources\Tienda_16x16.gif" />
+    <None Include="Resources\TarjetaCredito_32x32.gif" />
+    <None Include="Resources\Talon_32x32.gif" />
+    <None Include="Resources\Tablas_32x32.gif" />
+    <None Include="Resources\SubFamiliaArticulo_32x32.gif" />
+    <None Include="Resources\SubAlmacen_16x16.gif" />
+    <None Include="Resources\SolicitudArticulo_32x32.gif" />
+    <None Include="Resources\Seccion_16x16.gif" />
+    <None Include="Resources\Requerimiento_32x32.gif" />
+    <None Include="Resources\Reportes_32x32.gif" />
+    <None Include="Resources\RegistroCompra_32x32.gif" />
+    <None Include="Resources\Proveedor_32x32.gif" />
+    <None Include="Resources\Personal_32x32.gif" />
+    <None Include="Resources\Persona_16x16.gif" />
+    <None Include="Resources\Perfil_32x32.gif" />
+    <None Include="Resources\Pedido_32x32.gif" />
+    <None Include="Resources\Pedido_16x16.gif" />
+    <None Include="Resources\PagarProveedor_32x32.gif" />
+    <None Include="Resources\OrdenCompra_32x32.gif" />
+    <None Include="Resources\NumeracionDocumento_32x32.gif" />
+    <None Include="Resources\NotaSalida_16x16.gif" />
+    <None Include="Resources\NotaIngreso_16x16.gif" />
+    <None Include="Resources\NotaCredito_32x32.png" />
+    <None Include="Resources\Nivel_16x16.gif" />
+    <None Include="Resources\MovimientoCaja_32x32.gif" />
+    <None Include="Resources\MovimientoAlmacen_32x32.gif" />
+    <None Include="Resources\MotivoMovimiento_32x32.gif" />
+    <None Include="Resources\MotivoCompra_32x32.gif" />
+    <None Include="Resources\ModuloDocumento_32x32.gif" />
+    <None Include="Resources\Modulo_32x32.gif" />
+    <None Include="Resources\m_Reportes_16x16.gif" />
+    <None Include="Resources\ListaPrecioCliente_32x32.gif" />
+    <None Include="Resources\ListadoPrecio_32x32.gif" />
+    <None Include="Resources\Labor_16x16.gif" />
+    <None Include="Resources\Inventario_32x32.gif" />
+    <None Include="Resources\Gasto_32x32.gif" />
+    <None Include="Resources\FamiliaArticulo_32x32.gif" />
+    <None Include="Resources\FacturaCompra_32x32.gif" />
+    <None Include="Resources\Empresa_32x32.gif" />
+    <None Include="Resources\Empresa_16x16.gif" />
+    <None Include="Resources\Descuento_32x32.gif" />
+    <None Include="Resources\Desaprobar_16x16.gif" />
+    <None Include="Resources\Consultas_32x32.gif" />
+    <None Include="Resources\Consultas_16x16.gif" />
+    <None Include="Resources\CondicionPago_32x32.gif" />
+    <None Include="Resources\Comprobante_32x32.gif" />
+    <None Include="Resources\codigo.jpg" />
+    <None Include="Resources\CobrarCliente_32x32.gif" />
+    <None Include="Resources\Clientes_32x32.gif" />
+    <None Include="Resources\CierreCaja_32x32.gif" />
+    <None Include="Resources\Cargo_32x32.gif" />
+    <None Include="Resources\captcha.jpg" />
+    <None Include="Resources\Caja_32x32.gif" />
+    <None Include="Resources\Banco_32x32.gif" />
+    <None Include="Resources\Balanza_16x16.gif" />
+    <None Include="Resources\Articulo_32x32.gif" />
+    <None Include="Resources\Area_32x32.gif" />
+    <None Include="Resources\AprobarAnulacion_32x32.gif" />
+    <None Include="Resources\Aprobar_16x16.gif" />
+    <None Include="Resources\AprobacionRQ_32x32.gif" />
+    <None Include="Resources\AnulacionComprobante_32x32.gif" />
+    <None Include="Resources\Almacen_32x32.gif" />
+    <None Include="Resources\Almacen_16x16.gif" />
+    <None Include="Resources\Agregar_16x16.gif" />
+    <None Include="Resources\Aceptar_16x16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modulos\Invoices\Consultas\" />
+    <Folder Include="Modulos\Production\Maestros\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="App-ksirtet.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.BonusSkins.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Images.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v17.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v17.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v17.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v17.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v17.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v17.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Data.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Office.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Pdf.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Printing.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.RichEdit.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Sparkline.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraBars.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraEditors.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGrid.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraLayout.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPrinting.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraTreeList.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ERP.BusinessEntity">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ERP.BusinessLogic">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ERP.DataLogic">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Data.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Office.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Pdf.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Printing.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.RichEdit.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Sparkline.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Utils.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraBars.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraEditors.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraGrid.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraLayout.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraPrinting.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraTreeList.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Bank.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Classification.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Client.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Company.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Corporation.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Currency.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Destination.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Employee.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Evaluation.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\GroupStyle.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Login.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\MediaUnit.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Occupation.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Phase.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\ProductionProgram.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Profile.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Season.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Status.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\StatusPO.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Style.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Tablet.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Talla.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\Type.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\TypeCertificate.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\TypeDesign.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\TypeStyle.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Excel\WorkArea.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="FlashControlV71">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Aceptar_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\actualizar.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\ActualizarListaPrecio_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\add.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Add_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Cancelar_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Consultar_16x16.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\database16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\delete.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Descuento_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\edit.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Elementos_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\excel_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Exit.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Fecha_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\guardar_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Modulo_16X16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\noImage.jpg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\print_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Remove_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\save_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\Transferencia_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Imagenes\VerMovimiento_16x16.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Data.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Office.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Pdf.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Printing.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.RichEdit.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Sparkline.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Utils.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraBars.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraEditors.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGrid.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraLayout.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraPrinting.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraTreeList.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Practices.ObjectBuilder">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\AxInterop.AcroPDFLib.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\Interop.AcroPDFLib.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\nl\PdfiumViewer.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\PdfiumViewer.Demo.exe">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\PdfiumViewer.Demo.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\PdfiumViewer.Demo.vshost.exe">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\PdfiumViewer.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\PdfiumViewer.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\Vacio.pdf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\x64\pdfium.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Pdf\x86\pdfium.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Data.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Office.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Pdf.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Printing.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.RichEdit.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Sparkline.v17.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Utils.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraBars.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraEditors.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGrid.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraLayout.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraPrinting.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraTreeList.v17.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

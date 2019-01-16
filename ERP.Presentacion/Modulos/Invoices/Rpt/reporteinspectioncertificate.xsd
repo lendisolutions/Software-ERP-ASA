@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="reporteinspectioncertificate"
+    targetNamespace="http://tempuri.org/reporteinspectioncertificate.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/reporteinspectioncertificate.xsd"
+    xmlns:mstns="http://tempuri.org/reporteinspectioncertificate.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="reporteInspectionCertificate">
+    <xs:complexType>
+      <xs:sequence />
+      <xs:attribute name="NameCompany" type="xs:string" />
+      <xs:attribute name="Logo" type="xs:base64Binary" />
+      <xs:attribute name="NumberCertificate" type="xs:string" />
+      <xs:attribute name="NumberPO" type="xs:string" />
+      <xs:attribute name="NumberOI" type="xs:string" />
+      <xs:attribute name="NameClient" type="xs:string" />
+      <xs:attribute name="Comment" type="xs:string" />
+      <xs:attribute name="NameDivision" type="xs:string" />
+      <xs:attribute name="BrandCertificate" type="xs:string" />
+      <xs:attribute name="NameVendor" type="xs:string" />
+      <xs:attribute name="PaymentTerm" type="xs:string" />
+      <xs:attribute name="Cartons" type="xs:int" />
+      <xs:attribute name="IssueDate" type="xs:string" />
+      <xs:attribute name="NameRepresentative" type="xs:string" />
+      <xs:attribute name="DescriptionStyle" type="xs:string" />
+      <xs:attribute name="NumberInvoice" type="xs:string" />
+      <xs:attribute name="IssueDateInvoice" type="xs:string" />
+      <xs:attribute name="NameCurrency" type="xs:string" />
+      <xs:attribute name="Amount" type="xs:decimal" />
+      <xs:attribute name="EtdDate" type="xs:string" />
+      <xs:attribute name="NameTypeShipping" type="xs:string" />
+      <xs:attribute name="BoardingWay" type="xs:string" />
+      <xs:attribute name="NameStatus" type="xs:string" />
+      <xs:attribute name="Style" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+
+
+
+</xs:schema>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="reporteprogramproductiondevelopment"
+    targetNamespace="http://tempuri.org/reporteprogramproductiondevelopment.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/reporteprogramproductiondevelopment.xsd"
+    xmlns:mstns="http://tempuri.org/reporteprogramproductiondevelopment.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="reporteprogramproductiondevelopment">
+      <xs:complexType>
+        <xs:sequence />
+        <xs:attribute name="NameCompany" type="xs:string" />
+        <xs:attribute name="Logo" type="xs:base64Binary" />
+        <xs:attribute name="NameClient" type="xs:string" />
+        <xs:attribute name="NameDivision" type="xs:string" />
+        <xs:attribute name="XfDate" type="xs:string" />
+        <xs:attribute name="NumberPO" type="xs:string" />
+        <xs:attribute name="NameStyle" type="xs:string" />
+        <xs:attribute name="Description" type="xs:string" />
+        <xs:attribute name="Item" type="xs:string" />
+        <xs:attribute name="Detail" type="xs:string" />
+        <xs:attribute name="Units" type="xs:decimal" />
+        <xs:attribute name="Fob" type="xs:decimal" />
+        <xs:attribute name="DevDate" type="xs:string" />
+        <xs:attribute name="Comment" type="xs:string" />
+        <xs:attribute name="Situation" type="xs:string" />
+      </xs:complexType>
+    </xs:element>
+  
+  
+</xs:schema>

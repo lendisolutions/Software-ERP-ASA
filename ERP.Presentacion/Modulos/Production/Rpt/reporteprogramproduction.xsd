@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="reporteprogramproduction"
+    targetNamespace="http://tempuri.org/reporteprogramproduction.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/reporteprogramproduction.xsd"
+    xmlns:mstns="http://tempuri.org/reporteprogramproduction.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="reporteprogramproduction">
+    <xs:complexType>
+      <xs:sequence />
+      <xs:attribute name="NameCompany" type="xs:string" />
+      <xs:attribute name="Logo" type="xs:base64Binary" />
+      <xs:attribute name="NumberPP" type="xs:string" />
+      <xs:attribute name="NameClient" type="xs:string" />
+      <xs:attribute name="NameDivision" type="xs:string" />
+      <xs:attribute name="NameVendor" type="xs:string" />
+      <xs:attribute name="NameDestination" type="xs:string" />
+      <xs:attribute name="NameSeason" type="xs:string" />
+      <xs:attribute name="NameTypeProduct" type="xs:string" />
+      <xs:attribute name="NumberPO" type="xs:string" />
+      <xs:attribute name="NumberCommiment" type="xs:string" />
+      <xs:attribute name="XfDate" type="xs:string" />
+      <xs:attribute name="IndcDate" type="xs:string" />
+      <xs:attribute name="NameShipMode" type="xs:string" />
+      <xs:attribute name="Label" type="xs:string" />
+      <xs:attribute name="Addionational" type="xs:string" />
+      <xs:attribute name="NameStyle" type="xs:string" />
+      <xs:attribute name="Description" type="xs:string" />
+      <xs:attribute name="NumeroOI" type="xs:string" />
+      <xs:attribute name="Item" type="xs:string" />
+      <xs:attribute name="Detail" type="xs:string" />
+      <xs:attribute name="Units" type="xs:decimal" />
+      <xs:attribute name="Fob" type="xs:decimal" />
+      <xs:attribute name="Total" type="xs:decimal" />
+    </xs:complexType>
+  </xs:element>
+  
+  
+</xs:schema>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="reporteinvoice"
+    targetNamespace="http://tempuri.org/reporteinvoice.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/reporteinvoice.xsd"
+    xmlns:mstns="http://tempuri.org/reporteinvoice.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="reporteInvoice">
+      <xs:complexType>
+        <xs:sequence />
+        <xs:attribute name="NameCompany" type="xs:string" />
+        <xs:attribute name="Logo" type="xs:base64Binary" />
+        <xs:attribute name="NumberInvoice" type="xs:string" />
+        <xs:attribute name="NameClient" type="xs:string" />
+        <xs:attribute name="ConceptoImprime" type="xs:string" />
+        <xs:attribute name="IssueDate" type="xs:string" />
+        <xs:attribute name="NameDestination" type="xs:string" />
+        <xs:attribute name="BrandCertificate" type="xs:string" />
+        <xs:attribute name="PercentComision" type="xs:decimal" />
+        <xs:attribute name="ComisionImprime" type="xs:string" />
+        <xs:attribute name="AddressClient" type="xs:string" />
+        <xs:attribute name="Contac" type="xs:string" />
+        <xs:attribute name="Occupation" type="xs:string" />
+        <xs:attribute name="NoteGeneral" type="xs:string" />
+        <xs:attribute name="NameBank" type="xs:string" />
+        <xs:attribute name="NumberCtaCte" type="xs:string" />
+        <xs:attribute name="Swift" type="xs:string" />
+        <xs:attribute name="CodeAba" type="xs:string" />
+        <xs:attribute name="AddressBank" type="xs:string" />
+        <xs:attribute name="Phone" type="xs:string" />
+        <xs:attribute name="Representative" type="xs:string" />
+        <xs:attribute name="NameCurrency" type="xs:string" />
+        <xs:attribute name="TotalAmount" type="xs:decimal" />
+        <xs:attribute name="TotalComision" type="xs:decimal" />
+        <xs:attribute name="TotalPieces" type="xs:decimal" />
+        <xs:attribute name="NameStatus" type="xs:string" />
+        <xs:attribute name="ComisionLetter" type="xs:string" />
+        <xs:attribute name="NumberCertificate" type="xs:string" />
+        <xs:attribute name="IssueCertificate" type="xs:string" />
+        <xs:attribute name="NameVendor" type="xs:string" />
+        <xs:attribute name="NumberInvoiceCertificate" type="xs:string" />
+        <xs:attribute name="IssueDateInvoice" type="xs:string" />
+        <xs:attribute name="NameDivision" type="xs:string" />
+        <xs:attribute name="Amount" type="xs:decimal" />
+        <xs:attribute name="Comision" type="xs:decimal" />
+        <xs:attribute name="AmountDetail" type="xs:decimal" />
+        <xs:attribute name="ComisionDetail" type="xs:decimal" />
+        <xs:attribute name="Pieces" type="xs:decimal" />
+        <xs:attribute name="NumberPO" type="xs:string" />
+        <xs:attribute name="NumberOI" type="xs:string" />
+        <xs:attribute name="NameStyle" type="xs:string" />
+        <xs:attribute name="CertificateVince" type="xs:string" />
+        <xs:attribute name="StyleVince" type="xs:string" />
+      </xs:complexType>
+    </xs:element>
+
+
+
+
+</xs:schema>

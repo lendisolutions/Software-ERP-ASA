@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A896C96D-34BD-47F6-A878-511D02D51EB8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP.DataLogic</RootNamespace>
+    <AssemblyName>ERP.DataLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\..\COM ISS\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\..\COM ISS\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDL.cs" />
+    <Compile Include="BankDL.cs" />
+    <Compile Include="ClassificationDL.cs" />
+    <Compile Include="ClientAddressDL.cs" />
+    <Compile Include="ClientBrandDL.cs" />
+    <Compile Include="ClientContactDL.cs" />
+    <Compile Include="ClientDepartmentDL.cs" />
+    <Compile Include="ClientDL.cs" />
+    <Compile Include="ClientDocumentDL.cs" />
+    <Compile Include="ClientGoalDL.cs" />
+    <Compile Include="CommimentDetailDL.cs" />
+    <Compile Include="CommimentDL.cs" />
+    <Compile Include="CompanyDL.cs" />
+    <Compile Include="CorporationDL.cs" />
+    <Compile Include="CurrencyDL.cs" />
+    <Compile Include="DestinationDL.cs" />
+    <Compile Include="ElementTabletDL.cs" />
+    <Compile Include="EmployeeDL.cs" />
+    <Compile Include="EvaluationDL.cs" />
+    <Compile Include="GroupStyleDL.cs" />
+    <Compile Include="InspectionCertificateDetailDL.cs" />
+    <Compile Include="InspectionCertificateDL.cs" />
+    <Compile Include="InvoiceDetailDL.cs" />
+    <Compile Include="InvoiceDL.cs" />
+    <Compile Include="LoginAccessDL.cs" />
+    <Compile Include="LoginClientDepartmentDL.cs" />
+    <Compile Include="LoginDL.cs" />
+    <Compile Include="MediaUnitDL.cs" />
+    <Compile Include="MenuDL.cs" />
+    <Compile Include="OccupationDL.cs" />
+    <Compile Include="PhaseDL.cs" />
+    <Compile Include="ProfileDL.cs" />
+    <Compile Include="ProgramProductionAuditDL.cs" />
+    <Compile Include="ProgramProductionDetailDL.cs" />
+    <Compile Include="ProgramProductionDevelopmentDL.cs" />
+    <Compile Include="ProgramProductionDL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\ReporteInspectionCertificateDL.cs" />
+    <Compile Include="Reportes\ReporteInvoiceDL.cs" />
+    <Compile Include="Reportes\ReporteProgramProductionDevelopmentDL.cs" />
+    <Compile Include="Reportes\ReporteProgramProductionDL.cs" />
+    <Compile Include="SeasonDL.cs" />
+    <Compile Include="ShipModeDL.cs" />
+    <Compile Include="StatusDL.cs" />
+    <Compile Include="StatusPODL.cs" />
+    <Compile Include="StyleDL.cs" />
+    <Compile Include="TabletDL.cs" />
+    <Compile Include="TallaDL.cs" />
+    <Compile Include="TypeCertificateDL.cs" />
+    <Compile Include="TypeDesignDL.cs" />
+    <Compile Include="TypeDL.cs" />
+    <Compile Include="TypeProductDL.cs" />
+    <Compile Include="TypeStyleDL.cs" />
+    <Compile Include="UbigeoDL.cs" />
+    <Compile Include="VendorAddressDL.cs" />
+    <Compile Include="VendorClassificationDL.cs" />
+    <Compile Include="VendorContactDL.cs" />
+    <Compile Include="VendorDL.cs" />
+    <Compile Include="WorkAreaDL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.BusinessEntity\ERP.BusinessEntity.csproj">
+      <Project>{f1b9373b-fb47-4613-94b2-f4312a9d0fd0}</Project>
+      <Name>ERP.BusinessEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

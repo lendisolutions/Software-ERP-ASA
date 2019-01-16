@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1B9373B-FB47-4613-94B2-F4312A9D0FD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP.BusinessEntity</RootNamespace>
+    <AssemblyName>ERP.BusinessEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessBE.cs" />
+    <Compile Include="BankBE.cs" />
+    <Compile Include="ClassificationBE.cs" />
+    <Compile Include="ClientAddressBE.cs" />
+    <Compile Include="ClientBE.cs" />
+    <Compile Include="ClientBrandBE.cs" />
+    <Compile Include="ClientContactBE.cs" />
+    <Compile Include="ClientDepartmentBE.cs" />
+    <Compile Include="ClientDocumentBE.cs" />
+    <Compile Include="ClientGoalBE.cs" />
+    <Compile Include="CommimentBE.cs" />
+    <Compile Include="CommimentDetailBE.cs" />
+    <Compile Include="CompanyBE.cs" />
+    <Compile Include="CorporationBE.cs" />
+    <Compile Include="CurrencyBE.cs" />
+    <Compile Include="DestinationBE.cs" />
+    <Compile Include="ElementTabletBE.cs" />
+    <Compile Include="EmployeeBE.cs" />
+    <Compile Include="EvaluationBE.cs" />
+    <Compile Include="GroupStyleBE.cs" />
+    <Compile Include="InspectionCertificateBE.cs" />
+    <Compile Include="InspectionCertificateDetailBE.cs" />
+    <Compile Include="InvoiceBE.cs" />
+    <Compile Include="InvoiceDetailBE.cs" />
+    <Compile Include="LoginAccessBE.cs" />
+    <Compile Include="LoginBE.cs" />
+    <Compile Include="LoginClientDepartmentBE.cs" />
+    <Compile Include="MediaUnitBE.cs" />
+    <Compile Include="MenuBE.cs" />
+    <Compile Include="OccupationBE.cs" />
+    <Compile Include="PhaseBE.cs" />
+    <Compile Include="ProfileBE.cs" />
+    <Compile Include="ProgramProductionAuditBE.cs" />
+    <Compile Include="ProgramProductionBE.cs" />
+    <Compile Include="ProgramProductionDetailBE.cs" />
+    <Compile Include="ProgramProductionDevelopmentBE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\ReporteInspectionCertificateBE.cs" />
+    <Compile Include="Reportes\ReporteInvoiceBE.cs" />
+    <Compile Include="Reportes\ReporteProgramProductionBE.cs" />
+    <Compile Include="Reportes\ReporteProgramProductionDevelopmentBE.cs" />
+    <Compile Include="SeasonBE.cs" />
+    <Compile Include="ShipModeBE.cs" />
+    <Compile Include="StatusBE.cs" />
+    <Compile Include="StatusPOBE.cs" />
+    <Compile Include="StyleBE.cs" />
+    <Compile Include="TabletBE.cs" />
+    <Compile Include="TallaBE.cs" />
+    <Compile Include="TypeBE.cs" />
+    <Compile Include="TypeCertificateBE.cs" />
+    <Compile Include="TypeDesignBE.cs" />
+    <Compile Include="TypeProductBE.cs" />
+    <Compile Include="TypeStyleBE.cs" />
+    <Compile Include="UbigeoBE.cs" />
+    <Compile Include="VendorAddressBE.cs" />
+    <Compile Include="VendorBE.cs" />
+    <Compile Include="VendorClassificationBE.cs" />
+    <Compile Include="VendorContactBE.cs" />
+    <Compile Include="WorkAreaBE.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
