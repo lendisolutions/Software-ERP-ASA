@@ -558,41 +558,46 @@ namespace ERP.Presentacion.Modulos.Production.Registros
 
                     if (pOperacion == Operacion.Nuevo)
                     {
-                        objProgramProduction.IdProgramProduction = 0;
-                        int intNumero = 0;
-                        string strNumero = "";
-                        intNumero = objBL_ProgramProduction.Inserta(objProgramProduction, lstProgramProductionDetail);
-                        strNumero = FuncionBase.AgregarCaracter(intNumero.ToString(), "0", 10);
-                        txtNumero.Text = strNumero;
 
-                        //ActualizaNumero
-                        ProgramProductionBL objBProgramProduction = new ProgramProductionBL();
-                        objBProgramProduction.ActualizaNumero(intNumero, txtNumero.Text);
+                        
+                        var Buscar = lstProgramProduction.Where(oB => oB.NumberPO.ToUpper() == txtNumberPO.Text.ToUpper() && oB.IdVendor == Convert.ToInt32(cboVendor.EditValue) && oB.IdClientDepartment == Convert.ToInt32(cboDivision.EditValue)).ToList();
+                        if (Buscar.Count > 0)
+                        {
+                            if (XtraMessageBox.Show("the Number #PO already exists.\n The record can be duplicated, do you want to continue?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                objProgramProduction.IdProgramProduction = 0;
+                                int intNumero = 0;
+                                string strNumero = "";
+                                intNumero = objBL_ProgramProduction.Inserta(objProgramProduction, lstProgramProductionDetail);
+                                strNumero = FuncionBase.AgregarCaracter(intNumero.ToString(), "0", 10);
+                                txtNumero.Text = strNumero;
 
-                        ////ELIMINAMOS LOR ARCHIVOS CREADOS
-                        //foreach (var item in Directory.GetFiles(@"D:\", "*.pdf"))
-                        //{
-                        //    File.SetAttributes(item, FileAttributes.Normal);
-                        //    File.Delete(item);
-                        //}
+                                //ActualizaNumero
+                                ProgramProductionBL objBProgramProduction = new ProgramProductionBL();
+                                objBProgramProduction.ActualizaNumero(intNumero, txtNumero.Text);
 
-                        ////GENERAR EL REPORTE EN PDF
-                        //List<ReporteProgramProductionBE> lstReporteProgramProduction = null;
-                        //lstReporteProgramProduction = new ReporteProgramProductionBL().Listado(intNumero);
-                        //rptProgramProduction objReporte = new rptProgramProduction();
-                        //objReporte.SetDataSource(lstReporteProgramProduction);
-                        //objReporte.ExportToDisk(ExportFormatType.PortableDocFormat, @"D:\" + strNumero + ".pdf");
+                                Application.DoEvents();
+                            }
+                                
+                        }
+                        else
+                        {
+                            objProgramProduction.IdProgramProduction = 0;
+                            int intNumero = 0;
+                            string strNumero = "";
+                            intNumero = objBL_ProgramProduction.Inserta(objProgramProduction, lstProgramProductionDetail);
+                            strNumero = FuncionBase.AgregarCaracter(intNumero.ToString(), "0", 10);
+                            txtNumero.Text = strNumero;
 
-                        //StringBuilder strMensaje = new StringBuilder();
-                        //strMensaje.Append("********************************************************************************************\n\n");
-                        //strMensaje.Append("Se Generó el Ingreso al Programa de Producción : " + strNumero + "\n\n");
-                        //strMensaje.Append("Se se adjunta la información completa en formato Pdf. " + "\n\n");
-                        //strMensaje.Append("Emitido por el Software de Gestión Textil" + "\n\n");
-                        //strMensaje.Append("*********************************************************************************************\n\n");
+                            //ActualizaNumero
+                            ProgramProductionBL objBProgramProduction = new ProgramProductionBL();
+                            objBProgramProduction.ActualizaNumero(intNumero, txtNumero.Text);
 
-                        //BSUtils.EmailSend("lilia_montero@asatextile.com", "Ingreso Programa Producción", strMensaje.ToString(), @"D:\" + strNumero + ".pdf", "", "", "");
+                            Application.DoEvents();
+                        }
+                       
 
-                        Application.DoEvents();
+                       
                     }
                     else
                     {
@@ -736,15 +741,7 @@ namespace ERP.Presentacion.Modulos.Production.Registros
                 }
             }
 
-            if (pOperacion == Operacion.Nuevo)
-            {
-                var Buscar = lstProgramProduction.Where(oB => oB.NumberPO.ToUpper() == txtNumberPO.Text.ToUpper() && oB.IdVendor == Convert.ToInt32(cboVendor.EditValue) && oB.IdClientDepartment == Convert.ToInt32(cboDivision.EditValue)).ToList();
-                if (Buscar.Count > 0)
-                {
-                    strMensaje = strMensaje + "- Number #PO already exists.\n";
-                    flag = true;
-                }
-            }
+            
 
             if (flag)
             {
