@@ -790,6 +790,7 @@
             this.txtNumberInvoice.Properties.Appearance.Options.UseForeColor = true;
             this.txtNumberInvoice.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNumberInvoice.Properties.MaxLength = 100;
+            this.txtNumberInvoice.Properties.ReadOnly = true;
             this.txtNumberInvoice.Size = new System.Drawing.Size(287, 24);
             this.txtNumberInvoice.TabIndex = 151;
             // 
