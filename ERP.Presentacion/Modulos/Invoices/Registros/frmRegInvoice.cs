@@ -417,25 +417,27 @@ namespace ERP.Presentacion.Modulos.Invoices.Registros
 
                 xlHoja.Cells[4, 2] = cboClient.Text;
 
-                for (int i = 0; i < gvInvoice.DataRowCount; i++)
+                int[] rows = gvInvoice.GetSelectedRows();
+
+                for (int i = 0; i < rows.Length; i++)
                 {
                     strNameStatus = "";
-                    xlHoja.Cells[Row, 1] = gvInvoice.GetRowCellValue(i, "NumberInvoice").ToString();
+                    xlHoja.Cells[Row, 1] = gvInvoice.GetRowCellValue(rows[i], "NumberInvoice").ToString();
                     xlHoja.Cells[Row, 2] = BSUtils.GetDateFormat(DateTime.Parse(gvInvoice.GetRowCellValue(i, "IssueDate").ToString()));
-                    xlHoja.Cells[Row, 3] = gvInvoice.GetRowCellValue(i, "NameClient").ToString();
-                    xlHoja.Cells[Row, 4] = gvInvoice.GetRowCellValue(i, "NameBank").ToString();
-                    xlHoja.Cells[Row, 5] = gvInvoice.GetRowCellValue(i, "NameCurrency").ToString();
-                    xlHoja.Cells[Row, 6] = gvInvoice.GetRowCellValue(i, "TotalAmount").ToString();
-                    xlHoja.Cells[Row, 7] = gvInvoice.GetRowCellValue(i, "TotalComision").ToString();
-                    xlHoja.Cells[Row, 8] = gvInvoice.GetRowCellValue(i, "TotalPieces").ToString();
-                    strNameStatus = gvInvoice.GetRowCellValue(i, "NameStatus").ToString();
+                    xlHoja.Cells[Row, 3] = gvInvoice.GetRowCellValue(rows[i], "NameClient").ToString();
+                    xlHoja.Cells[Row, 4] = gvInvoice.GetRowCellValue(rows[i], "NameBank").ToString();
+                    xlHoja.Cells[Row, 5] = gvInvoice.GetRowCellValue(rows[i], "NameCurrency").ToString();
+                    xlHoja.Cells[Row, 6] = gvInvoice.GetRowCellValue(rows[i], "TotalAmount").ToString();
+                    xlHoja.Cells[Row, 7] = gvInvoice.GetRowCellValue(rows[i], "TotalComision").ToString();
+                    xlHoja.Cells[Row, 8] = gvInvoice.GetRowCellValue(rows[i], "TotalPieces").ToString();
+                    strNameStatus = gvInvoice.GetRowCellValue(rows[i], "NameStatus").ToString();
                     xlHoja.Cells[Row, 9] = strNameStatus;
 
                     if (strNameStatus == "ACTIVE" || strNameStatus == "FINISHED")
                     {
-                        decTotalAmount = decTotalAmount + decimal.Parse(gvInvoice.GetRowCellValue(i, "TotalAmount").ToString());
-                        decTotalComision = decTotalComision + decimal.Parse(gvInvoice.GetRowCellValue(i, "TotalComision").ToString());
-                        decTotalPieces = decTotalPieces + decimal.Parse(gvInvoice.GetRowCellValue(i, "TotalPieces").ToString());
+                        decTotalAmount = decTotalAmount + decimal.Parse(gvInvoice.GetRowCellValue(rows[i], "TotalAmount").ToString());
+                        decTotalComision = decTotalComision + decimal.Parse(gvInvoice.GetRowCellValue(rows[i], "TotalComision").ToString());
+                        decTotalPieces = decTotalPieces + decimal.Parse(gvInvoice.GetRowCellValue(rows[i], "TotalPieces").ToString());
                     }
 
                     Row = Row + 1;
