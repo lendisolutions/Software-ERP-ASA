@@ -59,6 +59,7 @@
             this.mnuContextualInspectionCertificateDetail = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.eliminarInspectionCertificateDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportexceltoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gvInspectionCertificateDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -101,7 +102,6 @@
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.btnGrabar = new DevExpress.XtraEditors.SimpleButton();
             this.bsListadoInspectionCertificateDetail = new System.Windows.Forms.BindingSource(this.components);
-            this.exportexceltoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -460,20 +460,28 @@
             this.toolStripSeparator1,
             this.exportexceltoolStripMenuItem1});
             this.mnuContextualInspectionCertificateDetail.Name = "contextMenuStrip1";
-            this.mnuContextualInspectionCertificateDetail.Size = new System.Drawing.Size(215, 90);
+            this.mnuContextualInspectionCertificateDetail.Size = new System.Drawing.Size(170, 62);
             // 
             // eliminarInspectionCertificateDetailToolStripMenuItem
             // 
             this.eliminarInspectionCertificateDetailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarInspectionCertificateDetailToolStripMenuItem.Image")));
             this.eliminarInspectionCertificateDetailToolStripMenuItem.Name = "eliminarInspectionCertificateDetailToolStripMenuItem";
-            this.eliminarInspectionCertificateDetailToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.eliminarInspectionCertificateDetailToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.eliminarInspectionCertificateDetailToolStripMenuItem.Text = "Delete";
             this.eliminarInspectionCertificateDetailToolStripMenuItem.Click += new System.EventHandler(this.eliminarInspectionCertificateDetailToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(166, 6);
+            // 
+            // exportexceltoolStripMenuItem1
+            // 
+            this.exportexceltoolStripMenuItem1.Image = global::ERP.Presentacion.Properties.Resources.excel_16x16;
+            this.exportexceltoolStripMenuItem1.Name = "exportexceltoolStripMenuItem1";
+            this.exportexceltoolStripMenuItem1.Size = new System.Drawing.Size(169, 26);
+            this.exportexceltoolStripMenuItem1.Text = "Export Detail";
+            this.exportexceltoolStripMenuItem1.Click += new System.EventHandler(this.exportexceltoolStripMenuItem1_Click);
             // 
             // gvInspectionCertificateDetail
             // 
@@ -908,14 +916,6 @@
             this.btnGrabar.TabIndex = 234;
             this.btnGrabar.Text = "Save";
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
-            // 
-            // exportexceltoolStripMenuItem1
-            // 
-            this.exportexceltoolStripMenuItem1.Image = global::ERP.Presentacion.Properties.Resources.excel_16x16;
-            this.exportexceltoolStripMenuItem1.Name = "exportexceltoolStripMenuItem1";
-            this.exportexceltoolStripMenuItem1.Size = new System.Drawing.Size(214, 26);
-            this.exportexceltoolStripMenuItem1.Text = "Export Detail";
-            this.exportexceltoolStripMenuItem1.Click += new System.EventHandler(this.exportexceltoolStripMenuItem1_Click);
             // 
             // frmRegInspectionCertificateEdit
             // 

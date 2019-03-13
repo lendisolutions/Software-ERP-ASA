@@ -401,23 +401,25 @@ namespace ERP.Presentacion.Modulos.Invoices.Registros
 
                 xlHoja.Cells[4, 2] = cboClient.Text;
 
-                for (int i = 0; i < gvInspectionCertificate.DataRowCount; i++)
+                int[] rows = gvInspectionCertificate.GetSelectedRows();
+
+                for (int i = 0; i < rows.Length; i++)
                 {
                     strNameStatus = "";
-                    xlHoja.Cells[Row, 1] = gvInspectionCertificate.GetRowCellValue(i, "NumberCertificate").ToString();
+                    xlHoja.Cells[Row, 1] = gvInspectionCertificate.GetRowCellValue(rows[i], "NumberCertificate").ToString();
                     xlHoja.Cells[Row, 2] = BSUtils.GetDateFormat(DateTime.Parse(gvInspectionCertificate.GetRowCellValue(i, "IssueDate").ToString()));
-                    xlHoja.Cells[Row, 3] = gvInspectionCertificate.GetRowCellValue(i, "NumberPO").ToString();
-                    xlHoja.Cells[Row, 4] = gvInspectionCertificate.GetRowCellValue(i, "NumberOI").ToString();
-                    xlHoja.Cells[Row, 5] = gvInspectionCertificate.GetRowCellValue(i, "NumberInvoice").ToString();
-                    xlHoja.Cells[Row, 6] = gvInspectionCertificate.GetRowCellValue(i, "NameVendor").ToString();
-                    xlHoja.Cells[Row, 7] = gvInspectionCertificate.GetRowCellValue(i, "Amount").ToString();
-                    xlHoja.Cells[Row, 8] = gvInspectionCertificate.GetRowCellValue(i, "NameTypeShipping").ToString();
-                    strNameStatus = gvInspectionCertificate.GetRowCellValue(i, "NameStatus").ToString();
+                    xlHoja.Cells[Row, 3] = gvInspectionCertificate.GetRowCellValue(rows[i], "NumberPO").ToString();
+                    xlHoja.Cells[Row, 4] = gvInspectionCertificate.GetRowCellValue(rows[i], "NumberOI").ToString();
+                    xlHoja.Cells[Row, 5] = gvInspectionCertificate.GetRowCellValue(rows[i], "NumberInvoice").ToString();
+                    xlHoja.Cells[Row, 6] = gvInspectionCertificate.GetRowCellValue(rows[i], "NameVendor").ToString();
+                    xlHoja.Cells[Row, 7] = gvInspectionCertificate.GetRowCellValue(rows[i], "Amount").ToString();
+                    xlHoja.Cells[Row, 8] = gvInspectionCertificate.GetRowCellValue(rows[i], "NameTypeShipping").ToString();
+                    strNameStatus = gvInspectionCertificate.GetRowCellValue(rows[i], "NameStatus").ToString();
                     xlHoja.Cells[Row, 9] = strNameStatus;
 
                     if (strNameStatus == "ACTIVE" || strNameStatus == "FINISHED")
                     {
-                        decTotal = decTotal + decimal.Parse(gvInspectionCertificate.GetRowCellValue(i, "Amount").ToString());
+                        decTotal = decTotal + decimal.Parse(gvInspectionCertificate.GetRowCellValue(rows[i], "Amount").ToString());
                     }
 
                     Row = Row + 1;
@@ -440,7 +442,6 @@ namespace ERP.Presentacion.Modulos.Invoices.Registros
                 xlHoja.Cells[Row + 3, 7].EntireRow.Font.Bold = true;
                 xlHoja.Cells[Row + 3, 7].EntireRow.Font.Size = 12;
                 xlHoja.Cells[Row + 3, 7] = decTotalComision;
-
 
                 xlLibro.SaveAs("C:\\Excel\\InspectionCertificate.xlsx", Excel.XlFileFormat.xlWorkbookDefault, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Excel.XlSaveAsAccessMode.xlExclusive, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
 
