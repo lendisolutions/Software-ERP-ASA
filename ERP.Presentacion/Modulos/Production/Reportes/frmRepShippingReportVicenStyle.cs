@@ -165,8 +165,8 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                     }
                 }
 
-                xlHoja.Cells[147, 8] = decTotalPO;
-                xlHoja.Cells[148, 8] = decTotalShip;
+                xlHoja.Cells[181, 8] = decTotalPO;
+                xlHoja.Cells[182, 8] = decTotalShip;
 
                 xlLibro.SaveAs("C:\\Excel\\ShippingReportVinceStyle.xlsx", Excel.XlFileFormat.xlWorkbookDefault, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Excel.XlSaveAsAccessMode.xlExclusive, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
 
