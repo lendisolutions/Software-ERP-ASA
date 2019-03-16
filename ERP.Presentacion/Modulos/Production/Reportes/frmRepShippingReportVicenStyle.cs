@@ -114,6 +114,8 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                 int Row = 7;
                 int RowDetail = 8;
                 int RowCertificate = 9;
+                decimal decTotalPO = 0;
+                decimal decTotalShip = 0;
 
                 xlHoja.Cells[2, 1] = "SHIPPING REPORT VINCE STYLE # " + txtNameStyle.Text;
                
@@ -139,6 +141,7 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                         xlHoja.Cells[RowDetail, 14] = item.XXL;
                         Row = Row + 7;
                         RowDetail = RowDetail + 7;
+                        decTotalPO = decTotalPO + item.XS + item.S + item.M + item.L + item.XL + item.XXL;
                     }
                 }
 
@@ -158,9 +161,12 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                         xlHoja.Cells[RowCertificate, 14] = item.XXL;
 
                         RowCertificate = RowCertificate + 7;
+                        decTotalShip = decTotalShip + item.XS + item.S + item.M + item.L + item.XL + item.XXL;
                     }
                 }
 
+                xlHoja.Cells[147, 8] = decTotalPO;
+                xlHoja.Cells[148, 8] = decTotalShip;
 
                 xlLibro.SaveAs("C:\\Excel\\ShippingReportVinceStyle.xlsx", Excel.XlFileFormat.xlWorkbookDefault, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Excel.XlSaveAsAccessMode.xlExclusive, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
 
