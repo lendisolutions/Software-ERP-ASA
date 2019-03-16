@@ -51,6 +51,8 @@ namespace ERP.BusinessEntity
         [DataMember]
         public String Detail { get; set; }
         [DataMember]
+        public String Dyelot { get; set; }
+        [DataMember]
         public Decimal Units { get; set; }
         [DataMember]
         public Decimal Fob { get; set; }

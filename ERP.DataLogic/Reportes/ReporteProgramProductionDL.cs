@@ -160,5 +160,34 @@ namespace ERP.DataLogic
             reader.Dispose();
             return ReporteProgramProductionlist;
         }
+
+        public List<ReporteProgramProductionBE> ListadoShippingReportVinceStyleGeneral(int IdCompany, int IdClient, int IdStyle, int IdSeason)
+        {
+            Database db = DatabaseFactory.CreateDatabase("cnERPBD");
+            DbCommand dbCommand = db.GetStoredProcCommand("usp_rptProgramProductionClient");
+            db.AddInParameter(dbCommand, "pIdCompany", DbType.Int32, IdCompany);
+            db.AddInParameter(dbCommand, "pIdClient", DbType.Int32, IdClient);
+            db.AddInParameter(dbCommand, "pIdStyle", DbType.Int32, IdStyle);
+            db.AddInParameter(dbCommand, "pIdSeason", DbType.Int32, IdSeason);
+
+            IDataReader reader = db.ExecuteReader(dbCommand);
+            List<ReporteProgramProductionBE> ReporteProgramProductionlist = new List<ReporteProgramProductionBE>();
+            ReporteProgramProductionBE ReporteProgramProduction;
+            while (reader.Read())
+            {
+                ReporteProgramProduction = new ReporteProgramProductionBE();
+                ReporteProgramProduction.NumberPO = reader["NumberPO"].ToString();
+                ReporteProgramProduction.Dyelot = reader["Dyelot"].ToString();
+                ReporteProgramProduction.NameVendor = reader["NameVendor"].ToString();
+                ReporteProgramProduction.NameStyle = reader["NameStyle"].ToString();
+                ReporteProgramProduction.Description = reader["Description"].ToString();
+                ReporteProgramProduction.Detail = reader["Detail"].ToString();
+                ReporteProgramProduction.NameDestination = reader["NameDestination"].ToString();
+                ReporteProgramProductionlist.Add(ReporteProgramProduction);
+            }
+            reader.Close();
+            reader.Dispose();
+            return ReporteProgramProductionlist;
+        }
     }
 }

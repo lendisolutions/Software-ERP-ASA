@@ -52,5 +52,17 @@ namespace ERP.BusinessLogic
             catch (Exception ex)
             { throw ex; }
         }
+
+        public List<ReporteProgramProductionBE> ListadoShippingReportVinceStyleGeneral(int IdCompany, int IdClient, int IdStyle, int IdSeason)
+        {
+            try
+            {
+                ReporteProgramProductionDL ProgramProduction = new ReporteProgramProductionDL();
+                return ProgramProduction.ListadoShippingReportVinceStyleGeneral(IdCompany, IdClient, IdStyle, IdSeason);
+            }
+            catch (Exception ex)
+            { throw ex; }
+        }
+
     }
 }
