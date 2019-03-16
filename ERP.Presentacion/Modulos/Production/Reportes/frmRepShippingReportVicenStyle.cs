@@ -28,6 +28,7 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
         #region "Propiedades"
 
         private List<ReporteProgramProductionBE> mLista = new List<ReporteProgramProductionBE>();
+        private List<ReporteInspectionCertificateBE> mListaInspeccionCertificate = new List<ReporteInspectionCertificateBE>();
 
         int intIdStyle = 0;
 
@@ -112,7 +113,7 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
             {
                 int Row = 7;
                 int RowDetail = 8;
-                
+                int RowCertificate = 9;
 
                 xlHoja.Cells[2, 1] = "SHIPPING REPORT VINCE STYLE # " + txtNameStyle.Text;
                
@@ -140,6 +141,26 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                         RowDetail = RowDetail + 7;
                     }
                 }
+
+                //INSPECTION CERTIFICATE
+
+                mListaInspeccionCertificate = new ReporteInspectionCertificateBL().ListadoShippingReportVinceStyle(Parametros.intEmpresaId, 7, txtNameStyle.Text.Trim());
+
+                if (mListaInspeccionCertificate.Count > 0)
+                {
+                    foreach (var item in mListaInspeccionCertificate)
+                    {
+                        xlHoja.Cells[RowCertificate, 9] = item.XS;
+                        xlHoja.Cells[RowCertificate, 10] = item.S;
+                        xlHoja.Cells[RowCertificate, 11] = item.M;
+                        xlHoja.Cells[RowCertificate, 12] = item.L;
+                        xlHoja.Cells[RowCertificate, 13] = item.XL;
+                        xlHoja.Cells[RowCertificate, 14] = item.XXL;
+
+                        RowCertificate = RowCertificate + 7;
+                    }
+                }
+
 
                 xlLibro.SaveAs("C:\\Excel\\ShippingReportVinceStyle.xlsx", Excel.XlFileFormat.xlWorkbookDefault, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Excel.XlSaveAsAccessMode.xlExclusive, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
 

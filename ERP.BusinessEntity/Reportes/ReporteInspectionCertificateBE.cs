@@ -58,6 +58,24 @@ namespace ERP.BusinessEntity
         public String Style { get; set; }
         [DataMember]
         public Int32 Pieces { get; set; }
+        [DataMember]
+        public String NameStyle { get; set; }
+        [DataMember]
+        public String Dyelot { get; set; }
+        [DataMember]
+        public String Color { get; set; }
+        [DataMember]
+        public Decimal XS { get; set; }
+        [DataMember]
+        public Decimal S { get; set; }
+        [DataMember]
+        public Decimal M { get; set; }
+        [DataMember]
+        public Decimal L { get; set; }
+        [DataMember]
+        public Decimal XL { get; set; }
+        [DataMember]
+        public Decimal XXL { get; set; }
 
     }
 }
