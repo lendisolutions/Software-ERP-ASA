@@ -63,16 +63,16 @@ namespace ERP.BusinessEntity
         [DataMember]
         public Decimal TotalFob { get; set; }
         [DataMember]
-        public Int32 XS { get; set; }
+        public Decimal XS { get; set; }
         [DataMember]
-        public Int32 S { get; set; }
+        public Decimal S { get; set; }
         [DataMember]
-        public Int32 M { get; set; }
+        public Decimal M { get; set; }
         [DataMember]
-        public Int32 L { get; set; }
+        public Decimal L { get; set; }
         [DataMember]
-        public Int32 XL { get; set; }
+        public Decimal XL { get; set; }
         [DataMember]
-        public Int32 XXL { get; set; }
+        public Decimal XXL { get; set; }
     }
 }
