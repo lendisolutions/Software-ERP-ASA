@@ -195,5 +195,39 @@ namespace ERP.DataLogic
             reader.Dispose();
             return ReporteProgramProductionlist;
         }
+
+        public List<ReporteProgramProductionBE> ListadoShippingReportVincePOGeneral(int IdCompany, int IdClient, string NumberPO)
+        {
+            Database db = DatabaseFactory.CreateDatabase("cnERPBD");
+            DbCommand dbCommand = db.GetStoredProcCommand("usp_rptShippingReportVincePOGeneral");
+            db.AddInParameter(dbCommand, "pIdCompany", DbType.Int32, IdCompany);
+            db.AddInParameter(dbCommand, "pIdClient", DbType.Int32, IdClient);
+            db.AddInParameter(dbCommand, "pNumberPO", DbType.String, NumberPO);
+            
+            IDataReader reader = db.ExecuteReader(dbCommand);
+            List<ReporteProgramProductionBE> ReporteProgramProductionlist = new List<ReporteProgramProductionBE>();
+            ReporteProgramProductionBE ReporteProgramProduction;
+            while (reader.Read())
+            {
+                ReporteProgramProduction = new ReporteProgramProductionBE();
+                ReporteProgramProduction.NumberPO = reader["NumberPO"].ToString();
+                ReporteProgramProduction.Dyelot = reader["Dyelot"].ToString();
+                ReporteProgramProduction.NameVendor = reader["NameVendor"].ToString();
+                ReporteProgramProduction.NameStyle = reader["NameStyle"].ToString();
+                ReporteProgramProduction.Description = reader["Description"].ToString();
+                ReporteProgramProduction.Detail = reader["Detail"].ToString();
+                ReporteProgramProduction.NameDestination = reader["NameDestination"].ToString();
+                ReporteProgramProduction.XS = Decimal.Parse(reader["XS"].ToString());
+                ReporteProgramProduction.S = Decimal.Parse(reader["S"].ToString());
+                ReporteProgramProduction.M = Decimal.Parse(reader["M"].ToString());
+                ReporteProgramProduction.L = Decimal.Parse(reader["L"].ToString());
+                ReporteProgramProduction.XL = Decimal.Parse(reader["XL"].ToString());
+                ReporteProgramProduction.XXL = Decimal.Parse(reader["XXL"].ToString());
+                ReporteProgramProductionlist.Add(ReporteProgramProduction);
+            }
+            reader.Close();
+            reader.Dispose();
+            return ReporteProgramProductionlist;
+        }
     }
 }

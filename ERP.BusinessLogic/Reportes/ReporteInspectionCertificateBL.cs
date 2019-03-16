@@ -31,5 +31,16 @@ namespace ERP.BusinessLogic
             catch (Exception ex)
             { throw ex; }
         }
+
+        public List<ReporteInspectionCertificateBE> ListadoShippingReportVincePO(int IdCompany, int IdClient, string NumberPO)
+        {
+            try
+            {
+                ReporteInspectionCertificateDL InspectionCertificate = new ReporteInspectionCertificateDL();
+                return InspectionCertificate.ListadoShippingReportVincePO(IdCompany, IdClient, NumberPO);
+            }
+            catch (Exception ex)
+            { throw ex; }
+        }
     }
 }

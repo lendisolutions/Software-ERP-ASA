@@ -738,6 +738,9 @@
     <Content Include="Excel\ShippingReportVinceStyle.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Excel\ShippingReportVincePO.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\print_16x16.gif" />
     <None Include="Modulos\Invoices\Rpt\reporteinvoice.xsd">
       <SubType>Designer</SubType>

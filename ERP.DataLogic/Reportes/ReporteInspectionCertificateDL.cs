@@ -93,5 +93,36 @@ namespace ERP.DataLogic
             reader.Dispose();
             return ReporteInspectionCertificatelist;
         }
+
+        public List<ReporteInspectionCertificateBE> ListadoShippingReportVincePO(int IdCompany, int IdClient, string NumberPO)
+        {
+            Database db = DatabaseFactory.CreateDatabase("cnERPBD");
+            DbCommand dbCommand = db.GetStoredProcCommand("usp_rptInspectionCertificteShippingReportVincePO");
+            db.AddInParameter(dbCommand, "pIdCompany", DbType.Int32, IdCompany);
+            db.AddInParameter(dbCommand, "pIdClient", DbType.Int32, IdClient);
+            db.AddInParameter(dbCommand, "pNumberPO", DbType.String, NumberPO);
+
+            IDataReader reader = db.ExecuteReader(dbCommand);
+            List<ReporteInspectionCertificateBE> ReporteInspectionCertificatelist = new List<ReporteInspectionCertificateBE>();
+            ReporteInspectionCertificateBE ReporteInspectionCertificate;
+            while (reader.Read())
+            {
+                ReporteInspectionCertificate = new ReporteInspectionCertificateBE();
+                ReporteInspectionCertificate.NumberPO = reader["NumberPO"].ToString();
+                ReporteInspectionCertificate.Dyelot = reader["Dyelot"].ToString();
+                ReporteInspectionCertificate.NameStyle = reader["NameStyle"].ToString();
+                ReporteInspectionCertificate.Color = reader["Color"].ToString();
+                ReporteInspectionCertificate.XS = Decimal.Parse(reader["XS"].ToString());
+                ReporteInspectionCertificate.S = Decimal.Parse(reader["S"].ToString());
+                ReporteInspectionCertificate.M = Decimal.Parse(reader["M"].ToString());
+                ReporteInspectionCertificate.L = Decimal.Parse(reader["L"].ToString());
+                ReporteInspectionCertificate.XL = Decimal.Parse(reader["XL"].ToString());
+                ReporteInspectionCertificate.XXL = Decimal.Parse(reader["XXL"].ToString());
+                ReporteInspectionCertificatelist.Add(ReporteInspectionCertificate);
+            }
+            reader.Close();
+            reader.Dispose();
+            return ReporteInspectionCertificatelist;
+        }
     }
 }
