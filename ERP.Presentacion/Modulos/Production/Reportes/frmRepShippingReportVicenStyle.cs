@@ -133,7 +133,7 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                         xlHoja.Cells[RowDetail, 9] = item.XS;
                         xlHoja.Cells[RowDetail, 10] = item.S;
                         xlHoja.Cells[RowDetail, 11] = item.M;
-                        xlHoja.Cells[RowDetail, 12] = item.L
+                        xlHoja.Cells[RowDetail, 12] = item.L;
                         xlHoja.Cells[RowDetail, 13] = item.XL;
                         xlHoja.Cells[RowDetail, 14] = item.XXL;
                         Row = Row + 7;
