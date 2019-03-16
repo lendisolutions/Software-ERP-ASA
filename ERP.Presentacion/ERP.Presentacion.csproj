@@ -654,6 +654,12 @@
     <Compile Include="Modulos\Production\Reportes\frmRepProgramProductionDevelopment.Designer.cs">
       <DependentUpon>frmRepProgramProductionDevelopment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepShippingReportVicenPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepShippingReportVicenPO.Designer.cs">
+      <DependentUpon>frmRepShippingReportVicenPO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Production\Reportes\frmRepShippingReportVicenStyle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -832,6 +838,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Production\Reportes\frmRepProgramProductionDevelopment.resx">
       <DependentUpon>frmRepProgramProductionDevelopment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Reportes\frmRepShippingReportVicenPO.resx">
+      <DependentUpon>frmRepShippingReportVicenPO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Production\Reportes\frmRepShippingReportVicenStyle.resx">
       <DependentUpon>frmRepShippingReportVicenStyle.cs</DependentUpon>

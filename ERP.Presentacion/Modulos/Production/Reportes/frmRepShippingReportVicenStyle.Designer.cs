@@ -145,7 +145,7 @@
             this.MinimizeBox = false;
             this.Name = "frmRepShippingReportVicenStyle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Shipping Report Vicen Style";
+            this.Text = "Shipping Report Vince Style";
             this.Load += new System.EventHandler(this.frmRepShippingReportVicenStyle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameStyle.Properties)).EndInit();
