@@ -65,6 +65,7 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcColumna5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcXfDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -72,7 +73,6 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcFileBox = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcGarmentBox = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -201,7 +201,7 @@
             this.btnBusStyle.Location = new System.Drawing.Point(1128, 64);
             this.btnBusStyle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBusStyle.Name = "btnBusStyle";
-            this.btnBusStyle.Size = new System.Drawing.Size(28, 26);
+            this.btnBusStyle.Size = new System.Drawing.Size(26, 26);
             this.btnBusStyle.TabIndex = 79;
             this.btnBusStyle.Click += new System.EventHandler(this.btnBusStyle_Click);
             // 
@@ -520,6 +520,19 @@
             this.gcColumna5.VisibleIndex = 5;
             this.gcColumna5.Width = 80;
             // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Item";
+            this.gridColumn3.FieldName = "Item";
+            this.gridColumn3.MinWidth = 25;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowFocus = false;
+            this.gridColumn3.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 6;
+            this.gridColumn3.Width = 150;
+            // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Style";
@@ -529,7 +542,7 @@
             this.gridColumn8.OptionsColumn.AllowFocus = false;
             this.gridColumn8.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 6;
+            this.gridColumn8.VisibleIndex = 7;
             this.gridColumn8.Width = 250;
             // 
             // gcXfDate
@@ -616,19 +629,6 @@
             this.gcGarmentBox.Visible = true;
             this.gcGarmentBox.VisibleIndex = 13;
             this.gcGarmentBox.Width = 115;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Item";
-            this.gridColumn3.FieldName = "Item";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
-            this.gridColumn3.OptionsColumn.AllowFocus = false;
-            this.gridColumn3.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 6;
-            this.gridColumn3.Width = 150;
             // 
             // frmConProductionProgramControlOI
             // 

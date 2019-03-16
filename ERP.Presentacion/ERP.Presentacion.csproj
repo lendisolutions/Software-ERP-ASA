@@ -654,6 +654,12 @@
     <Compile Include="Modulos\Production\Reportes\frmRepProgramProductionDevelopment.Designer.cs">
       <DependentUpon>frmRepProgramProductionDevelopment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepShippingReportVicenStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Production\Reportes\frmRepShippingReportVicenStyle.Designer.cs">
+      <DependentUpon>frmRepShippingReportVicenStyle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Production\Rpt\rptProgramProduction.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -728,8 +734,10 @@
     <Content Include="Excel\ProductionProgramSummary.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Excel\Shipping Report Vince Style.xlsx" />
     <None Include="Excel\Shipping Report.xlsx" />
+    <Content Include="Excel\ShippingReportVinceStyle.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\print_16x16.gif" />
     <None Include="Modulos\Invoices\Rpt\reporteinvoice.xsd">
       <SubType>Designer</SubType>
@@ -821,6 +829,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Production\Reportes\frmRepProgramProductionDevelopment.resx">
       <DependentUpon>frmRepProgramProductionDevelopment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Production\Reportes\frmRepShippingReportVicenStyle.resx">
+      <DependentUpon>frmRepShippingReportVicenStyle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Production\Rpt\rptProgramProduction.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

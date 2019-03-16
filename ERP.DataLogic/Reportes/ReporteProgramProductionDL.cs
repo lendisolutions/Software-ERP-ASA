@@ -183,6 +183,12 @@ namespace ERP.DataLogic
                 ReporteProgramProduction.Description = reader["Description"].ToString();
                 ReporteProgramProduction.Detail = reader["Detail"].ToString();
                 ReporteProgramProduction.NameDestination = reader["NameDestination"].ToString();
+                ReporteProgramProduction.XS = Int32.Parse(reader["XS"].ToString());
+                ReporteProgramProduction.S = Int32.Parse(reader["S"].ToString());
+                ReporteProgramProduction.M = Int32.Parse(reader["M"].ToString());
+                ReporteProgramProduction.L = Int32.Parse(reader["L"].ToString());
+                ReporteProgramProduction.XL = Int32.Parse(reader["XL"].ToString());
+                ReporteProgramProduction.XXL = Int32.Parse(reader["XXL"].ToString());
                 ReporteProgramProductionlist.Add(ReporteProgramProduction);
             }
             reader.Close();
