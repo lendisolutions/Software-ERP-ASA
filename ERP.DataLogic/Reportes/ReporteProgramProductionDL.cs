@@ -164,7 +164,7 @@ namespace ERP.DataLogic
         public List<ReporteProgramProductionBE> ListadoShippingReportVinceStyleGeneral(int IdCompany, int IdClient, int IdStyle, int IdSeason)
         {
             Database db = DatabaseFactory.CreateDatabase("cnERPBD");
-            DbCommand dbCommand = db.GetStoredProcCommand("usp_rptProgramProductionClient");
+            DbCommand dbCommand = db.GetStoredProcCommand("usp_rptShippingReportVinceStyleGeneral");
             db.AddInParameter(dbCommand, "pIdCompany", DbType.Int32, IdCompany);
             db.AddInParameter(dbCommand, "pIdClient", DbType.Int32, IdClient);
             db.AddInParameter(dbCommand, "pIdStyle", DbType.Int32, IdStyle);
