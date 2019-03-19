@@ -104,6 +104,7 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
             xlLibro = xlApp.Workbooks.Open(filename, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
             xlHojas = xlLibro.Sheets;
             xlHoja = (Excel._Worksheet)xlHojas[1];
+            Excel.Range xlRange;
 
             Cursor.Current = Cursors.WaitCursor;
 
@@ -114,6 +115,8 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                 int Row = 7;
                 int RowDetail = 8;
                 int RowCertificate = 9;
+                int FirstRowRange = 7;
+                int SecondRowRange = 11;
                 decimal decTotalPO = 0;
                 decimal decTotalShip = 0;
 
@@ -145,9 +148,41 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                         RowDetail = RowDetail + 7;
                         decTotalPO = decTotalPO + item.XS + item.S + item.M + item.L + item.XL + item.XXL;
                     }
-                }
 
-                
+
+                    //COLOREAMOS LAS FILAS SEGUN CRITERIO
+                    var lstPOS =
+                        from lista in mLista
+                        group lista by lista.NumberPO into newGroup
+                        orderby newGroup.Key
+                        select newGroup;
+
+                    string strNumberPO;
+                    Color[] ColorSet = { Color.Blue, Color.BlueViolet, Color.Crimson, Color.Chartreuse, Color.DarkGreen, Color.Brown,Color.CornflowerBlue, Color.Cyan,Color.DarkMagenta, Color.DarkOrange, Color.DeepPink, Color.OrangeRed, Color.MediumSlateBlue, Color.Orange, Color.DarkRed, Color.Aquamarine };
+                    int intColor = 0;
+
+
+                    foreach (var itempo in lstPOS)
+                    {
+                        strNumberPO = itempo.Key;
+                        foreach (var itemrange in mLista)
+                        {
+                            if (itemrange.NumberPO == strNumberPO)
+                            {
+                                xlRange = xlHoja.get_Range("A" + FirstRowRange + ":" + "O" + SecondRowRange);
+                                xlRange.Interior.Color = ColorSet[intColor];
+
+                                FirstRowRange = FirstRowRange + 7;
+                                SecondRowRange = SecondRowRange + 7;
+                               
+                            }
+
+                        }
+
+                        intColor = intColor + 1;
+                    }  
+
+                }
 
                 //INSPECTION CERTIFICATE
 
