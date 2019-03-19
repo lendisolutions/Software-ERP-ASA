@@ -133,14 +133,13 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                         xlHoja.Cells[Row, 4] = item.Detail;
                         xlHoja.Cells[Row, 5] = item.NumberPO + "\\" + item.Dyelot;
                         xlHoja.Cells[Row, 6] = item.NameDestination;
-                        xlHoja.Cells[RowDetail, 9] = item.XS;
-                        xlHoja.Cells[RowDetail, 10] = item.S;
-                        xlHoja.Cells[RowDetail, 11] = item.M;
-                        xlHoja.Cells[RowDetail, 12] = item.L;
-                        xlHoja.Cells[RowDetail, 13] = item.XL;
-                        xlHoja.Cells[RowDetail, 14] = item.XXL;
-
-                        xlHoja.Range["A7:N11"].Style.Color = Color.BlueViolet;
+                        xlHoja.Cells[RowDetail, 9] = item.XXS;
+                        xlHoja.Cells[RowDetail, 10] = item.XS;
+                        xlHoja.Cells[RowDetail, 11] = item.S;
+                        xlHoja.Cells[RowDetail, 12] = item.M;
+                        xlHoja.Cells[RowDetail, 13] = item.L;
+                        xlHoja.Cells[RowDetail, 14] = item.XL;
+                        xlHoja.Cells[RowDetail, 15] = item.XXL;
 
                         Row = Row + 7;
                         RowDetail = RowDetail + 7;
@@ -156,12 +155,13 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                 {
                     foreach (var item in mListaInspeccionCertificate)
                     {
-                        xlHoja.Cells[RowCertificate, 9] = item.XS;
-                        xlHoja.Cells[RowCertificate, 10] = item.S;
-                        xlHoja.Cells[RowCertificate, 11] = item.M;
-                        xlHoja.Cells[RowCertificate, 12] = item.L;
-                        xlHoja.Cells[RowCertificate, 13] = item.XL;
-                        xlHoja.Cells[RowCertificate, 14] = item.XXL;
+                        xlHoja.Cells[RowCertificate, 9] = item.XXS;
+                        xlHoja.Cells[RowCertificate, 10] = item.XS;
+                        xlHoja.Cells[RowCertificate, 11] = item.S;
+                        xlHoja.Cells[RowCertificate, 12] = item.M;
+                        xlHoja.Cells[RowCertificate, 13] = item.L;
+                        xlHoja.Cells[RowCertificate, 14] = item.XL;
+                        xlHoja.Cells[RowCertificate, 15] = item.XXL;
 
                         RowCertificate = RowCertificate + 7;
                         decTotalShip = decTotalShip + item.XS + item.S + item.M + item.L + item.XL + item.XXL;
