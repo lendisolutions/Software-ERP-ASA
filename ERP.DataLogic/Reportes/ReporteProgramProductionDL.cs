@@ -183,6 +183,7 @@ namespace ERP.DataLogic
                 ReporteProgramProduction.Description = reader["Description"].ToString();
                 ReporteProgramProduction.Detail = reader["Detail"].ToString();
                 ReporteProgramProduction.NameDestination = reader["NameDestination"].ToString();
+                ReporteProgramProduction.XXS = Decimal.Parse(reader["XXS"].ToString());
                 ReporteProgramProduction.XS = Decimal.Parse(reader["XS"].ToString());
                 ReporteProgramProduction.S = Decimal.Parse(reader["S"].ToString());
                 ReporteProgramProduction.M = Decimal.Parse(reader["M"].ToString());
@@ -217,6 +218,7 @@ namespace ERP.DataLogic
                 ReporteProgramProduction.Description = reader["Description"].ToString();
                 ReporteProgramProduction.Detail = reader["Detail"].ToString();
                 ReporteProgramProduction.NameDestination = reader["NameDestination"].ToString();
+                ReporteProgramProduction.XXS = Decimal.Parse(reader["XXS"].ToString());
                 ReporteProgramProduction.XS = Decimal.Parse(reader["XS"].ToString());
                 ReporteProgramProduction.S = Decimal.Parse(reader["S"].ToString());
                 ReporteProgramProduction.M = Decimal.Parse(reader["M"].ToString());

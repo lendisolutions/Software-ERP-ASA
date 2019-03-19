@@ -65,6 +65,8 @@ namespace ERP.BusinessEntity
         [DataMember]
         public String Color { get; set; }
         [DataMember]
+        public Decimal XXS { get; set; }
+        [DataMember]
         public Decimal XS { get; set; }
         [DataMember]
         public Decimal S { get; set; }

@@ -139,6 +139,9 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                         xlHoja.Cells[RowDetail, 12] = item.L;
                         xlHoja.Cells[RowDetail, 13] = item.XL;
                         xlHoja.Cells[RowDetail, 14] = item.XXL;
+
+                        xlHoja.Range["A7:N11"].Style.Color = Color.BlueViolet;
+
                         Row = Row + 7;
                         RowDetail = RowDetail + 7;
                         decTotalPO = decTotalPO + item.XS + item.S + item.M + item.L + item.XL + item.XXL;

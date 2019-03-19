@@ -81,6 +81,7 @@ namespace ERP.DataLogic
                 ReporteInspectionCertificate.Dyelot = reader["Dyelot"].ToString();
                 ReporteInspectionCertificate.NameStyle = reader["NameStyle"].ToString();
                 ReporteInspectionCertificate.Color = reader["Color"].ToString();
+                ReporteInspectionCertificate.XXS = Decimal.Parse(reader["XXS"].ToString());
                 ReporteInspectionCertificate.XS = Decimal.Parse(reader["XS"].ToString());
                 ReporteInspectionCertificate.S = Decimal.Parse(reader["S"].ToString());
                 ReporteInspectionCertificate.M = Decimal.Parse(reader["M"].ToString());
@@ -112,6 +113,7 @@ namespace ERP.DataLogic
                 ReporteInspectionCertificate.Dyelot = reader["Dyelot"].ToString();
                 ReporteInspectionCertificate.NameStyle = reader["NameStyle"].ToString();
                 ReporteInspectionCertificate.Color = reader["Color"].ToString();
+                ReporteInspectionCertificate.XXS = Decimal.Parse(reader["XXS"].ToString());
                 ReporteInspectionCertificate.XS = Decimal.Parse(reader["XS"].ToString());
                 ReporteInspectionCertificate.S = Decimal.Parse(reader["S"].ToString());
                 ReporteInspectionCertificate.M = Decimal.Parse(reader["M"].ToString());
