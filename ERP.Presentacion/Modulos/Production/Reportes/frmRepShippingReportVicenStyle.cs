@@ -147,6 +147,8 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                     }
                 }
 
+                
+
                 //INSPECTION CERTIFICATE
 
                 mListaInspeccionCertificate = new ReporteInspectionCertificateBL().ListadoShippingReportVinceStyle(Parametros.intEmpresaId, 7, txtNameStyle.Text.Trim());
