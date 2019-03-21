@@ -740,6 +740,9 @@
     <Content Include="Excel\ProductionProgramSummary.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Excel\OnTimeResumen.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Excel\Shipping Report.xlsx" />
     <Content Include="Excel\ShippingReportVinceStyle.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
