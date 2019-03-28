@@ -341,6 +341,7 @@ namespace ERP.DataLogic
                 Invoice.ComisionLetter = reader["ComisionLetter"].ToString();
                 Invoice.IdStatus = Int32.Parse(reader["IdStatus"].ToString());
                 Invoice.NameStatus = reader["NameStatus"].ToString();
+                Invoice.NameVendor = reader["NameVendor"].ToString();
                 Invoice.FlagState = Boolean.Parse(reader["FlagState"].ToString());
                 Invoicelist.Add(Invoice);
             }
@@ -397,6 +398,7 @@ namespace ERP.DataLogic
                 Invoice.ComisionLetter = reader["ComisionLetter"].ToString();
                 Invoice.IdStatus = Int32.Parse(reader["IdStatus"].ToString());
                 Invoice.NameStatus = reader["NameStatus"].ToString();
+                Invoice.NameVendor = reader["NameVendor"].ToString();
                 Invoice.FlagState = Boolean.Parse(reader["FlagState"].ToString());
                 Invoicelist.Add(Invoice);
             }
@@ -450,6 +452,7 @@ namespace ERP.DataLogic
                 Invoice.ComisionLetter = reader["ComisionLetter"].ToString();
                 Invoice.IdStatus = Int32.Parse(reader["IdStatus"].ToString());
                 Invoice.NameStatus = reader["NameStatus"].ToString();
+                Invoice.NameVendor = reader["NameVendor"].ToString();
                 Invoice.FlagState = Boolean.Parse(reader["FlagState"].ToString());
                 Invoicelist.Add(Invoice);
             }

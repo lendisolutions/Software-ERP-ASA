@@ -58,6 +58,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -300,7 +301,8 @@
             this.gridColumn6,
             this.gridColumn4,
             this.gridColumn2,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn9});
             this.gvInvoice.GridControl = this.gcInvoice;
             this.gvInvoice.Name = "gvInvoice";
             this.gvInvoice.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
@@ -441,6 +443,17 @@
             this.gridColumn1.VisibleIndex = 9;
             this.gridColumn1.Width = 90;
             // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Vendor";
+            this.gridColumn9.FieldName = "NameVendor";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
+            this.gridColumn9.OptionsColumn.AllowFocus = false;
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 10;
+            this.gridColumn9.Width = 400;
+            // 
             // frmRegInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -501,5 +514,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraEditors.SimpleButton btnImprimir;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
     }
 }

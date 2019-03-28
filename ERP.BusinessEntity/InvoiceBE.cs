@@ -81,6 +81,8 @@ namespace ERP.BusinessEntity
         public String NameCurrency { get; set; }
         [DataMember]
         public String NameStatus { get; set; }
+        [DataMember]
+        public String NameVendor { get; set; }
         #endregion
     }
 }

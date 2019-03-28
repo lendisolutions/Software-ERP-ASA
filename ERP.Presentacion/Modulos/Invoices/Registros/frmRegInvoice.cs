@@ -432,6 +432,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Registros
                     xlHoja.Cells[Row, 8] = gvInvoice.GetRowCellValue(rows[i], "TotalPieces").ToString();
                     strNameStatus = gvInvoice.GetRowCellValue(rows[i], "NameStatus").ToString();
                     xlHoja.Cells[Row, 9] = strNameStatus;
+                    xlHoja.Cells[Row, 10] = gvInvoice.GetRowCellValue(rows[i], "NameVendor").ToString();
 
                     if (strNameStatus == "ACTIVE" || strNameStatus == "FINISHED")
                     {
@@ -442,6 +443,8 @@ namespace ERP.Presentacion.Modulos.Invoices.Registros
 
                     Row = Row + 1;
                     Secuencia = Secuencia + 1;
+
+          
                 }
 
                 xlHoja.Cells[Row + 2, 6].EntireRow.Font.Bold = true;
