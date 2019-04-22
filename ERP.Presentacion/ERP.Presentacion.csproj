@@ -510,6 +510,12 @@
     <Compile Include="Modulos\Invoices\Registros\frmRegInvoiceEdit.Designer.cs">
       <DependentUpon>frmRegInvoiceEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Invoices\Reportes\frmRepMontlySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Invoices\Reportes\frmRepMontlySales.Designer.cs">
+      <DependentUpon>frmRepMontlySales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Invoices\Rpt\rptInspectionCertificate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -787,6 +793,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Invoices\Registros\frmRegInvoiceEdit.resx">
       <DependentUpon>frmRegInvoiceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Invoices\Reportes\frmRepMontlySales.resx">
+      <DependentUpon>frmRepMontlySales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Invoices\Rpt\rptInspectionCertificate.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
