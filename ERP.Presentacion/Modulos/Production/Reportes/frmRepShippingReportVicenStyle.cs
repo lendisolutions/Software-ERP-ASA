@@ -158,7 +158,7 @@ namespace ERP.Presentacion.Modulos.Production.Reportes
                         select newGroup;
 
                     string strNumberPO;
-                    Color[] ColorSet = { Color.Blue, Color.BlueViolet, Color.Crimson, Color.Chartreuse, Color.DarkGreen, Color.Brown,Color.CornflowerBlue, Color.Cyan,Color.DarkMagenta, Color.DarkOrange, Color.DeepPink, Color.OrangeRed, Color.MediumSlateBlue, Color.Orange, Color.DarkRed, Color.Aquamarine };
+                    Color[] ColorSet = { Color.DodgerBlue, Color.MediumPurple, Color.LightGreen, Color.NavajoWhite, Color.LightCoral, Color.Aquamarine, Color.Brown,Color.CornflowerBlue, Color.Cyan,Color.DarkMagenta, Color.DarkOrange, Color.DeepPink, Color.OrangeRed, Color.MediumSlateBlue, Color.Orange, Color.DarkRed };
                     int intColor = 0;
 
 
