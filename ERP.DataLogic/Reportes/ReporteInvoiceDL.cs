@@ -106,5 +106,37 @@ namespace ERP.DataLogic
             reader.Dispose();
             return ReporteInvoicelist;
         }
+
+        public List<ReporteInvoiceBE> ListadoMontlySales(int IdCompany, int IdClient, int Periodo, int Mes)
+        {
+            Database db = DatabaseFactory.CreateDatabase("cnERPBD");
+            DbCommand dbCommand = db.GetStoredProcCommand("usp_rptInvoiceMontlySales");
+            db.AddInParameter(dbCommand, "pIdCompany", DbType.Int32, IdCompany);
+            db.AddInParameter(dbCommand, "pIdClient", DbType.Int32, IdClient);
+            db.AddInParameter(dbCommand, "pPeriodo", DbType.Int32, Periodo);
+            db.AddInParameter(dbCommand, "pMes", DbType.Int32, Mes);
+
+            IDataReader reader = db.ExecuteReader(dbCommand);
+            List<ReporteInvoiceBE> ReporteInvoicelist = new List<ReporteInvoiceBE>();
+            ReporteInvoiceBE ReporteInvoice;
+            while (reader.Read())
+            {
+                ReporteInvoice = new ReporteInvoiceBE();
+                ReporteInvoice.NameCompany = reader["NameCompany"].ToString();
+                ReporteInvoice.NumberInvoice = reader["NumberInvoice"].ToString();
+                DateTime deIssueCertificate = DateTime.Parse(reader["IssueCertificate"].ToString());
+                ReporteInvoice.IssueCertificate = deIssueCertificate.ToString("MM/dd/yyyy");
+                ReporteInvoice.NameClient = reader["NameClient"].ToString();
+                ReporteInvoice.NameDestination = reader["NameDestination"].ToString();
+                ReporteInvoice.Contac = reader["Contac"].ToString();
+                ReporteInvoice.TotalAmount = Decimal.Parse(reader["TotalAmount"].ToString());
+                ReporteInvoice.TotalComision = Decimal.Parse(reader["TotalComision"].ToString());
+                ReporteInvoice.TotalPieces = Decimal.Parse(reader["TotalPieces"].ToString());
+                ReporteInvoicelist.Add(ReporteInvoice);
+            }
+            reader.Close();
+            reader.Dispose();
+            return ReporteInvoicelist;
+        }
     }
 }

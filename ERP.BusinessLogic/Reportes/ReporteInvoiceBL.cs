@@ -101,5 +101,16 @@ namespace ERP.BusinessLogic
             catch (Exception ex)
             { throw ex; }
         }
+
+        public List<ReporteInvoiceBE> ListadoMontlySales(int IdCompany, int IdClient, int Periodo, int Mes)
+        {
+            try
+            {
+                ReporteInvoiceDL Invoice = new ReporteInvoiceDL();
+                return Invoice.ListadoMontlySales(IdCompany,IdClient,Periodo,Mes);
+            }
+            catch (Exception ex)
+            { throw ex; }
+        }
     }
 }
