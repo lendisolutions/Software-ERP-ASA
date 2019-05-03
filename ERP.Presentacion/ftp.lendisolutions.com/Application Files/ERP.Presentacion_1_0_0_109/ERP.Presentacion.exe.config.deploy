@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+      <add name="cnERPBD" connectionString="Data Source=tcp:serv-lendi.database.windows.net,1433;Initial Catalog=DB_ERP_ASA;Persist Security Info=True;User ID=asa;Password=lendi2019@" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <startup useLegacyV2RuntimeActivationPolicy="true">
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2"/>
+  </startup>
+  <appSettings>
+      <add key="Usuario" value=""/>
+      <add key="Clave" value=""/>
+   </appSettings>
+</configuration>

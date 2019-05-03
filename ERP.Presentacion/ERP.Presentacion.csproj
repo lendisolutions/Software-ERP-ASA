@@ -16,7 +16,7 @@
     <SccProvider>SAK</SccProvider>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>ftp://200.60.112.30/asa/</PublishUrl>
+    <PublishUrl>ftp://ftp.lendisolutions.com/public_html/gestiontextil/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -27,12 +27,11 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://localhost/ERP.Presentacion/</InstallUrl>
-    <UpdateUrl>\\172.23.64.203\ASA\</UpdateUrl>
+    <UpdateUrl>\\ftp.lendisolutions.com\public_html\gestiontextil\</UpdateUrl>
     <ProductName>Gestión Textil</ProductName>
     <PublisherName>Lendi Solutions</PublisherName>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>108</ApplicationRevision>
+    <ApplicationRevision>114</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
