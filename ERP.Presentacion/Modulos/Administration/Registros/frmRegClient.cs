@@ -264,7 +264,7 @@ namespace ERP.Presentacion.Modulos.Administration.Registros
                 lstClient = new ClientBL().ListaTodosActivo(Parametros.intEmpresaId);
                 if (lstClient.Count > 0)
                 {
-                    xlHoja.Shapes.AddPicture(Path.Combine(Directory.GetCurrentDirectory(), "Logo.jpg"), Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 1, 1, 80, 60);
+                    xlHoja.Shapes.AddPicture(Path.Combine(Directory.GetCurrentDirectory(), "Logo.jpg"), Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 1, 1, 100, 60);
 
                     foreach (var item in lstClient)
                     {

@@ -894,7 +894,7 @@
             this.labelControl8.Location = new System.Drawing.Point(1117, 51);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(80, 16);
+            this.labelControl8.Size = new System.Drawing.Size(100, 16);
             this.labelControl8.TabIndex = 179;
             this.labelControl8.Text = "RevenueDate:";
             // 

@@ -703,7 +703,7 @@
             this.labelControl11.Location = new System.Drawing.Point(591, 163);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(80, 16);
+            this.labelControl11.Size = new System.Drawing.Size(100, 16);
             this.labelControl11.TabIndex = 233;
             this.labelControl11.Text = "Type Product:";
             // 

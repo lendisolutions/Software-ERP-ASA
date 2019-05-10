@@ -75,7 +75,7 @@
             // 
             // cboVendor
             // 
-            this.cboVendor.Location = new System.Drawing.Point(80, 43);
+            this.cboVendor.Location = new System.Drawing.Point(100, 43);
             this.cboVendor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboVendor.Name = "cboVendor";
             this.cboVendor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -96,7 +96,7 @@
             // 
             // cboClient
             // 
-            this.cboClient.Location = new System.Drawing.Point(80, 13);
+            this.cboClient.Location = new System.Drawing.Point(100, 13);
             this.cboClient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboClient.Name = "cboClient";
             this.cboClient.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -138,7 +138,7 @@
             // deDateTo
             // 
             this.deDateTo.EditValue = new System.DateTime(2017, 11, 13, 0, 0, 0, 0);
-            this.deDateTo.Location = new System.Drawing.Point(80, 103);
+            this.deDateTo.Location = new System.Drawing.Point(100, 103);
             this.deDateTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.deDateTo.Name = "deDateTo";
             this.deDateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -151,7 +151,7 @@
             // deDateFrom
             // 
             this.deDateFrom.EditValue = new System.DateTime(2017, 11, 13, 0, 0, 0, 0);
-            this.deDateFrom.Location = new System.Drawing.Point(80, 73);
+            this.deDateFrom.Location = new System.Drawing.Point(100, 73);
             this.deDateFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.deDateFrom.Name = "deDateFrom";
             this.deDateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {

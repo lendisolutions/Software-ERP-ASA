@@ -249,7 +249,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Maestros
                 lstTypeCertificate = new TypeCertificateBL().ListaTodosActivo(Parametros.intEmpresaId);
                 if (lstTypeCertificate.Count > 0)
                 {
-                    xlHoja.Shapes.AddPicture(Path.Combine(Directory.GetCurrentDirectory(), "Logo.jpg"), Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 1, 1, 80, 60);
+                    xlHoja.Shapes.AddPicture(Path.Combine(Directory.GetCurrentDirectory(), "Logo.jpg"), Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 1, 1, 100, 60);
 
                     foreach (var item in lstTypeCertificate)
                     {

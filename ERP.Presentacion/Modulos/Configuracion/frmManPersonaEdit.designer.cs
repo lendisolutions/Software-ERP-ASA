@@ -193,7 +193,7 @@
             this.cboCargo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboCargo.Properties.NullText = "";
-            this.cboCargo.Size = new System.Drawing.Size(780, 22);
+            this.cboCargo.Size = new System.Drawing.Size(7100, 22);
             this.cboCargo.TabIndex = 15;
             // 
             // labelControl24

@@ -270,7 +270,7 @@
             this.grpPermisos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpPermisos.Name = "grpPermisos";
             this.grpPermisos.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpPermisos.Size = new System.Drawing.Size(180, 418);
+            this.grpPermisos.Size = new System.Drawing.Size(1100, 418);
             this.grpPermisos.TabIndex = 1;
             this.grpPermisos.TabStop = false;
             this.grpPermisos.Text = "Permits";
