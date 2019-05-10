@@ -742,6 +742,9 @@
     <Content Include="Excel\Invoice.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Excel\MonthlySalesReport.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Excel\NEW WIP FORMAT.xlsx" />
     <Content Include="Excel\ProductionProgramSummary.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

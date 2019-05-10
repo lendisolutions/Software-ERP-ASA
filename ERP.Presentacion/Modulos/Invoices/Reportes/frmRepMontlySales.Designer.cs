@@ -35,6 +35,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.cboMes = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtPeriodo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboMes.Properties)).BeginInit();
             this.SuspendLayout();
@@ -121,11 +122,24 @@
             this.labelControl13.TabIndex = 162;
             this.labelControl13.Text = "Month:";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.ImageOptions.ImageIndex = 0;
+            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton1.Location = new System.Drawing.Point(380, 96);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(87, 28);
+            this.simpleButton1.TabIndex = 164;
+            this.simpleButton1.Text = "Cancel";
+            // 
             // frmRepMontlySales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 135);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.cboMes);
             this.Controls.Add(this.labelControl13);
             this.Controls.Add(this.txtPeriodo);
@@ -153,5 +167,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         public DevExpress.XtraEditors.LookUpEdit cboMes;
         private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
