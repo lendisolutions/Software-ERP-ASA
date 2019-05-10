@@ -121,7 +121,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
             Excel._Worksheet xlHoja;
             Excel.Sheets xlHojas;
             xlApp = new Excel.Application();
-            filename = Path.Combine(Directory.GetCurrentDirectory(), "Excel\\Invoice.xlsx");
+            filename = Path.Combine(Directory.GetCurrentDirectory(), "Excel\\MonthlySalesReport.xlsx");
             xlLibro = xlApp.Workbooks.Open(filename, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
             xlHojas = xlLibro.Sheets;
             xlHoja = (Excel._Worksheet)xlHojas[1];
@@ -133,7 +133,10 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
             try
             {
                 xlHoja.Cells[4, 2] = cboMes.Text + " " + txtPeriodo.EditValue.ToString();
-                int RowA = 7;
+
+                //DILLARDS
+
+                int RowA = 11;
 
                 List<ReporteInvoiceBE> lstInvoiceDillars = null;
                 lstInvoiceDillars = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 18, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
@@ -151,6 +154,182 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
 
                     RowA = RowA + 1;
                    
+                }
+
+                //TEA LIVING INC
+
+                int RowB = 24;
+
+                List<ReporteInvoiceBE> lstInvoiceTeaLiving = null;
+                lstInvoiceTeaLiving = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 60, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
+
+                foreach (var item in lstInvoiceTeaLiving)
+                {
+                    xlHoja.Cells[RowB, 1] = item.IssueDate;
+                    xlHoja.Cells[RowB, 2] = item.NameClient;
+                    xlHoja.Cells[RowB, 3] = item.Contac;
+                    xlHoja.Cells[RowB, 4] = item.NameDestination;
+                    xlHoja.Cells[RowB, 5] = item.NumberInvoice;
+                    xlHoja.Cells[RowB, 6] = item.TotalAmount;
+                    xlHoja.Cells[RowB, 8] = item.TotalComision;
+                    xlHoja.Cells[RowB, 9] = item.TotalPieces;
+
+                    RowB = RowB + 1;
+
+                }
+
+                //BI - BILLING
+
+                int RowC = 37;
+
+                List<ReporteInvoiceBE> lstInvoiceBiBilling = null;
+                lstInvoiceBiBilling = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 8, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
+
+                foreach (var item in lstInvoiceBiBilling)
+                {
+                    xlHoja.Cells[RowC, 1] = item.IssueDate;
+                    xlHoja.Cells[RowC, 2] = item.NameClient;
+                    xlHoja.Cells[RowC, 3] = item.Contac;
+                    xlHoja.Cells[RowC, 4] = item.NameDestination;
+                    xlHoja.Cells[RowC, 5] = item.NumberInvoice;
+                    xlHoja.Cells[RowC, 6] = item.TotalAmount;
+                    xlHoja.Cells[RowC, 8] = item.TotalComision;
+                    xlHoja.Cells[RowC, 9] = item.TotalPieces;
+
+                    RowC = RowC + 1;
+
+                }
+
+                //URBAN OUTFITTERS, INC
+
+                int RowD = 61;
+
+                List<ReporteInvoiceBE> lstInvoiceUrban = null;
+                lstInvoiceUrban = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 65, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
+
+                foreach (var item in lstInvoiceUrban)
+                {
+                    xlHoja.Cells[RowD, 1] = item.IssueDate;
+                    xlHoja.Cells[RowD, 2] = item.NameClient;
+                    xlHoja.Cells[RowD, 3] = item.Contac;
+                    xlHoja.Cells[RowD, 4] = item.NameDestination;
+                    xlHoja.Cells[RowD, 5] = item.NumberInvoice;
+                    xlHoja.Cells[RowD, 6] = item.TotalAmount;
+                    xlHoja.Cells[RowD, 8] = item.TotalComision;
+                    xlHoja.Cells[RowD, 9] = item.TotalPieces;
+
+                    RowD = RowD + 1;
+
+                }
+
+                //VINCE
+
+                int RowE = 90;
+
+                List<ReporteInvoiceBE> lstInvoiceVince = null;
+                lstInvoiceVince = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 7, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
+
+                foreach (var item in lstInvoiceVince)
+                {
+                    xlHoja.Cells[RowE, 1] = item.IssueDate;
+                    xlHoja.Cells[RowE, 2] = item.NameClient;
+                    xlHoja.Cells[RowE, 3] = item.Contac;
+                    xlHoja.Cells[RowE, 4] = item.NameDestination;
+                    xlHoja.Cells[RowE, 5] = item.NumberInvoice;
+                    xlHoja.Cells[RowE, 6] = item.TotalAmount;
+                    xlHoja.Cells[RowE, 8] = item.TotalComision;
+                    xlHoja.Cells[RowE, 9] = item.TotalPieces;
+
+                    RowE = RowE + 1;
+
+                }
+
+                //ROBERTA ROLLER RABBIT LLC
+
+                int RowF = 129;
+
+                List<ReporteInvoiceBE> lstInvoiceRoberta = null;
+                lstInvoiceRoberta = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 53, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
+
+                foreach (var item in lstInvoiceRoberta)
+                {
+                    xlHoja.Cells[RowF, 1] = item.IssueDate;
+                    xlHoja.Cells[RowF, 2] = item.NameClient;
+                    xlHoja.Cells[RowF, 3] = item.Contac;
+                    xlHoja.Cells[RowF, 4] = item.NameDestination;
+                    xlHoja.Cells[RowF, 5] = item.NumberInvoice;
+                    xlHoja.Cells[RowF, 6] = item.TotalAmount;
+                    xlHoja.Cells[RowF, 8] = item.TotalComision;
+                    xlHoja.Cells[RowF, 9] = item.TotalPieces;
+
+                    RowF = RowF + 1;
+
+                }
+
+                //OPE SRL
+
+                int RowG = 175;
+
+                List<ReporteInvoiceBE> lstInvoiceOPE = null;
+                lstInvoiceOPE = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 44, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
+
+                foreach (var item in lstInvoiceOPE)
+                {
+                    xlHoja.Cells[RowG, 1] = item.IssueDate;
+                    xlHoja.Cells[RowG, 2] = item.NameClient;
+                    xlHoja.Cells[RowG, 3] = item.Contac;
+                    xlHoja.Cells[RowG, 4] = item.NameDestination;
+                    xlHoja.Cells[RowG, 5] = item.NumberInvoice;
+                    xlHoja.Cells[RowG, 6] = item.TotalAmount;
+                    xlHoja.Cells[RowG, 8] = item.TotalComision;
+                    xlHoja.Cells[RowG, 9] = item.TotalPieces;
+
+                    RowG = RowG + 1;
+
+                }
+
+                //MOTT & BOW
+
+                int RowH = 188;
+
+                List<ReporteInvoiceBE> lstInvoiceMott = null;
+                lstInvoiceMott = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 76, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
+
+                foreach (var item in lstInvoiceMott)
+                {
+                    xlHoja.Cells[RowH, 1] = item.IssueDate;
+                    xlHoja.Cells[RowH, 2] = item.NameClient;
+                    xlHoja.Cells[RowH, 3] = item.Contac;
+                    xlHoja.Cells[RowH, 4] = item.NameDestination;
+                    xlHoja.Cells[RowH, 5] = item.NumberInvoice;
+                    xlHoja.Cells[RowH, 6] = item.TotalAmount;
+                    xlHoja.Cells[RowH, 8] = item.TotalComision;
+                    xlHoja.Cells[RowH, 9] = item.TotalPieces;
+
+                    RowH = RowH + 1;
+
+                }
+
+                //KATE SPADE & COMPANY
+
+                int RowI = 201;
+
+                List<ReporteInvoiceBE> lstInvoiceKate = null;
+                lstInvoiceKate = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 32, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
+
+                foreach (var item in lstInvoiceKate)
+                {
+                    xlHoja.Cells[RowI, 1] = item.IssueDate;
+                    xlHoja.Cells[RowI, 2] = item.NameClient;
+                    xlHoja.Cells[RowI, 3] = item.Contac;
+                    xlHoja.Cells[RowI, 4] = item.NameDestination;
+                    xlHoja.Cells[RowI, 5] = item.NumberInvoice;
+                    xlHoja.Cells[RowI, 6] = item.TotalAmount;
+                    xlHoja.Cells[RowI, 8] = item.TotalComision;
+                    xlHoja.Cells[RowI, 9] = item.TotalPieces;
+
+                    RowI = RowI + 1;
+
                 }
 
                 xlLibro.SaveAs("C:\\Excel\\MonthlySalesReport.xlsx", Excel.XlFileFormat.xlWorkbookDefault, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Excel.XlSaveAsAccessMode.xlExclusive, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);

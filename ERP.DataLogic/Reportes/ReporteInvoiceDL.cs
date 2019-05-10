@@ -124,8 +124,8 @@ namespace ERP.DataLogic
                 ReporteInvoice = new ReporteInvoiceBE();
                 ReporteInvoice.NameCompany = reader["NameCompany"].ToString();
                 ReporteInvoice.NumberInvoice = reader["NumberInvoice"].ToString();
-                DateTime deIssueCertificate = DateTime.Parse(reader["IssueCertificate"].ToString());
-                ReporteInvoice.IssueCertificate = deIssueCertificate.ToString("MM/dd/yyyy");
+                DateTime deIssueDate = DateTime.Parse(reader["IssueDate"].ToString());
+                ReporteInvoice.IssueDate = deIssueDate.ToString("MM/dd/yyyy");
                 ReporteInvoice.NameClient = reader["NameClient"].ToString();
                 ReporteInvoice.NameDestination = reader["NameDestination"].ToString();
                 ReporteInvoice.Contac = reader["Contac"].ToString();
