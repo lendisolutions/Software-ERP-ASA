@@ -423,7 +423,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Registros
                 {
                     strNameStatus = "";
                     xlHoja.Cells[Row, 1] = gvInvoice.GetRowCellValue(rows[i], "NumberInvoice").ToString();
-                    xlHoja.Cells[Row, 2] = BSUtils.GetDateFormat(DateTime.Parse(gvInvoice.GetRowCellValue(i, "IssueDate").ToString()));
+                    xlHoja.Cells[Row, 2] = BSUtils.GetDateFormat(DateTime.Parse(gvInvoice.GetRowCellValue(rows[i], "IssueDate").ToString()));
                     xlHoja.Cells[Row, 3] = gvInvoice.GetRowCellValue(rows[i], "NameClient").ToString();
                     xlHoja.Cells[Row, 4] = gvInvoice.GetRowCellValue(rows[i], "NameBank").ToString();
                     xlHoja.Cells[Row, 5] = gvInvoice.GetRowCellValue(rows[i], "NameCurrency").ToString();
