@@ -158,7 +158,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
 
                 //TEA LIVING INC
 
-                int RowB = 24;
+                int RowB = 29;
 
                 List<ReporteInvoiceBE> lstInvoiceTeaLiving = null;
                 lstInvoiceTeaLiving = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 60, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
@@ -180,7 +180,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
 
                 //BI - BILLING
 
-                int RowC = 37;
+                int RowC = 47;
 
                 List<ReporteInvoiceBE> lstInvoiceBiBilling = null;
                 lstInvoiceBiBilling = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 8, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
@@ -202,7 +202,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
 
                 //URBAN OUTFITTERS, INC
 
-                int RowD = 61;
+                int RowD = 76;
 
                 List<ReporteInvoiceBE> lstInvoiceUrban = null;
                 lstInvoiceUrban = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 65, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
@@ -224,7 +224,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
 
                 //VINCE
 
-                int RowE = 90;
+                int RowE = 115;
 
                 List<ReporteInvoiceBE> lstInvoiceVince = null;
                 lstInvoiceVince = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 7, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
@@ -246,7 +246,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
 
                 //ROBERTA ROLLER RABBIT LLC
 
-                int RowF = 134;
+                int RowF = 201;
 
                 List<ReporteInvoiceBE> lstInvoiceRoberta = null;
                 lstInvoiceRoberta = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 53, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
@@ -268,7 +268,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
 
                 //OPE SRL
 
-                int RowG = 180;
+                int RowG = 252;
 
                 List<ReporteInvoiceBE> lstInvoiceOPE = null;
                 lstInvoiceOPE = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 44, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
@@ -290,7 +290,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
 
                 //MOTT & BOW
 
-                int RowH = 193;
+                int RowH = 270;
 
                 List<ReporteInvoiceBE> lstInvoiceMott = null;
                 lstInvoiceMott = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 76, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
@@ -312,7 +312,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Reportes
 
                 //KATE SPADE & COMPANY
 
-                int RowI = 206;
+                int RowI = 288;
 
                 List<ReporteInvoiceBE> lstInvoiceKate = null;
                 lstInvoiceKate = new ReporteInvoiceBL().ListadoMontlySales(Parametros.intEmpresaId, 32, Convert.ToInt32(txtPeriodo.EditValue), Convert.ToInt32(cboMes.EditValue));
