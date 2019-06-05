@@ -407,7 +407,7 @@ namespace ERP.Presentacion.Modulos.Invoices.Registros
                 {
                     strNameStatus = "";
                     xlHoja.Cells[Row, 1] = gvInspectionCertificate.GetRowCellValue(rows[i], "NumberCertificate").ToString();
-                    xlHoja.Cells[Row, 2] = BSUtils.GetDateFormat(DateTime.Parse(gvInspectionCertificate.GetRowCellValue(i, "IssueDate").ToString()));
+                    xlHoja.Cells[Row, 2] = BSUtils.GetDateFormat(DateTime.Parse(gvInspectionCertificate.GetRowCellValue(rows[i], "IssueDate").ToString()));
                     xlHoja.Cells[Row, 3] = gvInspectionCertificate.GetRowCellValue(rows[i], "NumberPO").ToString();
                     xlHoja.Cells[Row, 4] = gvInspectionCertificate.GetRowCellValue(rows[i], "NumberOI").ToString();
                     xlHoja.Cells[Row, 5] = gvInspectionCertificate.GetRowCellValue(rows[i], "NumberInvoice").ToString();
