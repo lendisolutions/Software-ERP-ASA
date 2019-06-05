@@ -180,7 +180,7 @@
             this.xtraTabPage1.Controls.Add(this.labelControl3);
             this.xtraTabPage1.Controls.Add(this.cboVendor);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1273, 680);
+            this.xtraTabPage1.Size = new System.Drawing.Size(12093, 680);
             this.xtraTabPage1.Text = "General Data";
             // 
             // cboPaymentTerm
@@ -642,7 +642,7 @@
             this.gcPOOrder.OptionsColumn.AllowFocus = false;
             this.gcPOOrder.Visible = true;
             this.gcPOOrder.VisibleIndex = 5;
-            this.gcPOOrder.Width = 100;
+            this.gcPOOrder.Width = 110;
             // 
             // gcPieces
             // 
@@ -654,7 +654,7 @@
             this.gcPieces.Name = "gcPieces";
             this.gcPieces.Visible = true;
             this.gcPieces.VisibleIndex = 6;
-            this.gcPieces.Width = 100;
+            this.gcPieces.Width = 110;
             // 
             // gcTxtUnits
             // 
@@ -701,7 +701,7 @@
             this.gcAmount.OptionsColumn.AllowFocus = false;
             this.gcAmount.Visible = true;
             this.gcAmount.VisibleIndex = 9;
-            this.gcAmount.Width = 120;
+            this.gcAmount.Width = 145;
             // 
             // gridColumn42
             // 
